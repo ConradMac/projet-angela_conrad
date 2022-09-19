@@ -1,0 +1,138 @@
+header .top-nav {
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+}
+
+
+.top-bar {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #333;
+    min-height: 45px;
+    line-height: 45px;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+
+.top-bar ul {
+    display: flex;
+    margin-left: 0;
+    height: 45px;
+    line-height: 45px;
+    list-style: none;
+}
+
+.top-bar>ul>li {
+    flex: 1 1 auto;
+    float: left;
+}
+
+.top-bar #smallTimer.show {
+    background: #f5f5f5;
+}
+
+.top-bar>ul>li.flip-flop {
+    flex: 1 1 140px;
+    z-index: 5;
+    min-width: 125px;
+}
+
+.top-bar .flip-flop {
+    height: 45px;
+    perspective: 200px;
+    perspective-origin: 50% 50%;
+}
+
+.top-bar #smallTimer.show a.cube {
+    display: block;
+}
+
+.top-bar #smallTimer a.cube {
+    display: none;
+    padding: 0;
+}
+
+.top-bar .flip-flop .cube {
+    border: 1px solid #000;
+    height: 45px;
+    transition: .33s;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -22.5px;
+}
+
+.top-bar>ul>li>a:not(.button) {
+    padding: 0 20px;
+    text-align: center;
+    color: #ddd;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+}
+
+.top-bar a {
+    text-decoration: none;
+}
+
+.top-bar #smallTimer.show a.cube {
+    display: block;
+}
+
+.top-bar #smallTimer a.cube {
+    display: none;
+    padding: 0;
+}
+
+.top-bar .flip-flop .cube:hover {
+    transform: rotateX(90deg);
+}
+
+.top-bar .flip-flop .cube {
+    height: 45px;
+    transition: .33s;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -22.5px;
+}
+
+.top-bar .flip-flop .flop {
+    -webkit-transform-origin: 50% 0 0;
+    -moz-transform-origin: 50% 0 0;
+    -ms-transform-origin: 50% 0 0;
+    -o-transform-origin: 50% 0 0;
+    transform-origin: 50% 0 0;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+.top-bar .flip-flop .flippety,
+.top-bar .flip-flop .flop {
+    background: #333;
+    text-align: center;
+    padding: 0 12px;
+    height: 45px;
+}
+
+.top-bar #smallTimer a.cube div.duration {
+    height: 45px;
+    padding: 0 24px 0 30px;
+    position: relative;
+    text-align: center;
+}
+
+.top-nav {
+    @media screen and (min-width: 661px) {
+        .top-bar {
+            display: block;
+        }
+    }
+}

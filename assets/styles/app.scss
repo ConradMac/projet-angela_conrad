@@ -1,0 +1,11 @@
+// body {
+//     background-color: yellow; // ordre de code important !!!!
+// }
+@use 'faq';
+@use '_footer';
+@use '_elementsjs';
+@use '_nav';
+@use 'index';
+@use '_nav-responsive-burger';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '_variables';
