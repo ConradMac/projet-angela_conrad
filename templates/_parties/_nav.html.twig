@@ -1,8 +1,11 @@
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('assets/styles/_nav.scss') }}" />
+{% endblock %}
 <div class="top-nav contain-to-grid wrapper">
   <nav class="top-bar">
     <ul>
       <li id="smallTimer" class="small-text flip-flop show">
-        <a class="cube" href="#timer">
+        <a class="cube" href="{{ path('app_home') }}">
           <div class="duration flippety media-screen">
             L'accueil
           </div>
@@ -12,27 +15,42 @@
         </a>
       </li>
       <li id="smallTimer" class="small-text flip-flop show">
-        <a class="cube" href="#timer">
+        <a class="cube" href="{{ path('app_equipe') }}">
           <div class="duration flippety media-screen">
             L'équipe
           </div>
           <div class="flop media-screen">
-            <span class="description">Deux prefesionnel pour vous !</span>
+            <span class="description">Deux profesionnels pour vous !</span>
           </div>
         </a>
       </li>
-      <li id="smallTimer" class="small-text flip-flop show">
-        <a class="cube" href="#timer">
+
+      {# <li id="smallTimer" class="small-text flip-flop show">
+        <a class="cube" href="{{ path('app_services') }}">
           <div class="duration flippety media-screen">
             Services
           </div>
           <div class="flop media-screen">
             <span class="description">Ce que nous vous proposons</span>
+            <ul>
+              <li>SEO</li>
+              <li>Marketing Digital E-Commerce</li>
+              <li>Création de site internet</li>
+            </ul>
           </div>
         </a>
+      </li> #}
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="{{ path('app_seo') }}">SEO</a>
+          <a href="#">E-Commerce Shopify/ WordPress</a>
+          <a href="#">Création site Internet</a>
+        </div>
       </li>
+
       <li id="smallTimer" class="small-text flip-flop show">
-        <a class="cube" href="#timer">
+        <a class="cube" href="{{ path('app_contact') }}">
           <div class="duration flippety media-screen">
             Nous Contacter
           </div>
@@ -40,6 +58,16 @@
             <span class="description">
               N'ayez pas peur, dites nous vos envies.
             </span>
+          </div>
+        </a>
+      </li>
+      <li id="smallTimer" class="small-text flip-flop show">
+        <a class="cube" href="{{ path('app_contact') }}">
+          <div class="duration flippety media-screen">
+            Se connecter
+          </div>
+          <div class="flop media-screen">
+            <span class="description">Votre compte</span>
           </div>
         </a>
       </li>

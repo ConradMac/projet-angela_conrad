@@ -1,0 +1,139 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// body {
+//     background: #012;
+//     min-height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+.toto-seo {
+    background: #012;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    height: auto;
+    color: gray;
+
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-seo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: consolas;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff;
+    font-size: 17px;
+    animation: textRotation 8s linear infinite;
+}
+
+.logo-seo {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("https://assets.codepen.io/7344750/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1657025755&width=512");
+    background-size: cover;
+    border-radius: 100vmax;
+    background-position: center;
+}
+
+.page-seo span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+
+// -----------------------------------
+
+.main-page-seo {
+    .block-page-seo {
+        align-items: center;
+        margin-top: 7%;
+        margin: 5%;
+    }
+}
+
+.bouton-seo {
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    gap: 1em;
+    margin-top: 2%;
+
+    .bouton-contactez {
+        margin: 0 auto;
+        border: 0;
+        width: 15em;
+        height: 3em;
+        font-size: 17px;
+        background: white;
+        filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.5));
+        // box-shadow: 30px 5px rgba(0, 0, 0, 0.2);
+
+
+        // cela permet de faire un effet de transition sur le bouton (avant et apres), before et after servent à créer un effet de transition de la ligne de couleur
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.75s ease-in-out;
+
+        }
+
+        // cela permet de créer une ligne de couleur qui suit le curseur de la souris, avant le passage de la souris
+        &::before {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            left: -1px;
+            bottom: -1px;
+            border-right: 3px solid gray;
+            border-top: 3px solid gray;
+            transforM: rotate(180deg); // permet de faire une rotation de 180 degrés
+        }
+
+        // &::after ici on crée une ligne de couleur qui suit le curseur de la souris quand on quite la souris du bouton qui revient a son origine apres le passage de la souris
+        &::after {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: -1px;
+            right: -1px;
+            border-right: 3px solid gray;
+            border-top: 3px solid gray;
+        }
+
+        // les deux elements ici sont la taille et la hauteur du bouton avant le passage de la souris et quand la souris quitte le bouton
+        &:hover:before,
+        &:hover:after {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+@keyframes textRotation {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -19,6 +19,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "assets": "^3.0.1"
+        "assets": "^3.0.1",
+        "uninstall": "^0.0.0"
     }
 }

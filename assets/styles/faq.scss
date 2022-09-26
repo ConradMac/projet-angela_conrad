@@ -2,17 +2,24 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+    margin-top: 5%;
+
 
 
     .titre-faq {
         color: black;
+        text-decoration: underline;
 
-        .paragraphe-faq {
-            color: red;
-            width: 80%;
-        }
+    }
+
+    .paragraphe-faq {
+        color: black;
+        width: 50%;
+        margin-top: 2%;
+        font-weight: bold;
+        line-height: 2;
     }
 }
 
@@ -38,6 +45,10 @@
         height: 100px;
         padding: 10px;
 
+        .box:hover {
+            text-decoration: underline;
+        }
+
     }
 
     .box.active .label::before {
@@ -52,6 +63,8 @@
         position: relative;
         border-radius: 25px;
         font-size: 23px;
+
+
     }
 
     .label::before {
@@ -60,17 +73,22 @@
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
+
+
+
+
     }
 
     .content {
-        font-size: 15px;
+        font-size: 17px;
         background-color: #EEEEEE;
         overflow: hidden; // permet de cacher le contenu de l'onglet
-        overflow-y: auto; // permet de faire defiler le contenu de l'onglet
+        // overflow-y: auto; // permet de faire defiler le contenu de l'onglet. A voir ave cnuno si on garde ou pas.
         height: 0;
         position: relative;
         transition: all 1s ease; // permet de faire une animation lors de l'ouverture de l'onglet en 1 seconde
         border-radius: 15px;
+        font-weight: bold;
 
         .content::-webkit-scrollbar {
             // permet de cacher la barre de defilement, à utiliser avec parsimony

@@ -1,26 +1,30 @@
-*,
-::before,
-::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// *,
+// ::before,
+// ::after {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
 
 .global-test {
-    background-image: url("../../public/images/galerie_glaces_768x500_acf_cropped.jpg");
+    background-image: url("../../public/images/dev.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     overflow-x: hidden;
-}
-
-body {
-    background: white;
-    font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-
 }
 
+// body {
+//     // background: black;
+//     font-family: Arial, Helvetica, sans-serif;
+//     height: 100vh;
+
+// }
+
+.container-first {
+    height: 100vh !important;
+}
 
 .container-first h1 {
     // position: absolute;

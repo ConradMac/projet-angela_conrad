@@ -160,6 +160,7 @@ span .h3,
     font-size: 20px;
     margin: 0 10px;
     transition: all 200ms ease-in-out;
+
 }
 
 .back .button:hover,
@@ -278,6 +279,10 @@ span .h3,
 
         .cadre {
             margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
         }
 
 
@@ -319,7 +324,7 @@ span .h3,
             width: 80%;
             margin-bottom: 10%;
             position: relative;
-            top: 10%;
+            top: 5%;
             left: 7%;
             border-radius: 4%;
         }
@@ -389,11 +394,11 @@ span .h3,
 
 .text-block-area {
     width: 600px;
-    background-color: #eee;
+    background-color: #15153C;
     border-radius: 25px;
     $field-font-size: 15px;
     text-align: start;
-    height: 300px;
+    height: 70%;
 }
 
 .wrapper .bloc {
@@ -404,27 +409,30 @@ span .h3,
 
 .wrapper :target+div {
     display: block;
-}
-
-.rouge {
-    // background-color: red;
-    color: rgb(0, 0, 0);
+    color: white;
+    line-height: 2;
     height: 250px;
 }
 
-.jaune {
-    // background-color: yellow;
-    color: rgb(0, 0, 0);
-    height: 250px;
-}
+// .rouge {
+//     // background-color: red;
+//     color: rgb(0, 0, 0);
+//     height: 250px;
+// }
 
-.violet {
-    // background-color: purple;
-    color: rgb(0, 0, 0);
-    height: 250px;
-}
+// .jaune {
+//     // background-color: yellow;
+//     color: rgb(0, 0, 0);
+//     height: 250px;
+// }
 
-.black {
-    color: rgb(0, 0, 0);
-    height: 250px;
-}
+// .violet {
+//     // background-color: purple;
+//     color: rgb(0, 0, 0);
+//     height: 250px;
+// }
+
+// .black {
+//     color: rgb(0, 0, 0);
+//     height: 250px;
+// }

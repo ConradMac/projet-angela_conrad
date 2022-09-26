@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+  {# {{ form(form) }}
+  {% block body %} #}
+  <section class="container">
+    <h1 class="mb-5 titre-contact">
+      Je me renseigne
+    </h1>
+
+    <div class="form">
+      {{ form_start(form) }}
+      {{ form_row(form.email) }}
+      {# {{ form_row(form.pseudo) }} #}
+      {{ form_row(form.name) }}
+      {{ form_row(form.lastname) }}
+
+      {# {{
+        form_row(
+          form.plainPassword,
+          {
+            label: 'Mot de passe',
+            help: '6 caractères minimum'
+          }
+        )
+      }} #}
+
+      {# {{
+        form_row(
+          form.agreeTerms,
+          {
+            label: "J'accepte les conditions du site"
+          }
+        )
+      }} #}
+
+      {# <button type="submit" class="btn btn-success">M'inscrire</button> #}
+      {{ form_end(form) }}
+    </div>
+  </section>
+{% endblock %}
+{# {% endblock %} #}

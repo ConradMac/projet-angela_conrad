@@ -4,9 +4,7 @@ header .top-nav {
     @media screen and (max-width: 768px) {
         display: none;
     }
-
 }
-
 
 .top-bar {
     display: block;
@@ -62,7 +60,7 @@ header .top-nav {
     border: 1px solid #000;
     height: 45px;
     transition: .33s;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; // cette ligne permet de faire la rotation
     transform-origin: 50% 50% -22.5px;
 }
 
@@ -134,5 +132,71 @@ header .top-nav {
         .top-bar {
             display: block;
         }
+    }
+}
+
+// Dropdown onglet
+li {
+    float: left;
+
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #333;
+        }
+    }
+
+    li.dropdown {
+        display: inline-block;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(#333, white);
+    border-radius: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+// autre changement de nav bar (carré à gauche)
+ol,
+ul {
+    padding-left: 0px !important;
+}
+
+@media only screen and (min-width: 601px) {
+
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+        height: 0 !important;
     }
 }

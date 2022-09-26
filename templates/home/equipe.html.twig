@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Notre équipe
+{% endblock %}
+
+{% block body %}
+  <div class="team-block">
+    <section class="titre-equipe">
+      <h1 class="page-title">
+        Notre équipe de professionnels à votre service
+      </h1>
+    </section>
+    <div class="leadership">
+      <div class="block-equipe">
+        <div class="leader">
+          <div class="leader__img">
+            <img class="images-team"
+              src="{{ asset('/images_teams/AngelaKunder.jpg') }}"
+              alt="image_team" />
+          </div>
+          <div class="leader__name">
+            <h2>
+              Angela Kunder
+            </h2>
+            <p>
+              <em>Responsable projet e-commerce & Développeur Front End</em>
+            </p>
+          </div>
+        </div>
+        <div class="text-bio">
+          <p class="paragraphe-bio">
+            L'esprit d'entreprendre et le goût du challenge sont mes 2 piliers.
+
+            Créer, adapter une stratégie e-commerce et Digital ; être acteur de
+            la transformation digital ; optimiser le SEO / SEA ; mettre en place
+            de nouveaux canaux d'acquisition ; optimiser une CRM btoc ou btob ;
+            gérer des clients grands comptes sont autant de sujet sur lesquels
+            je peux vous accompagner.
+
+            Mon objectif : Partenaire de votre performance digitale.
+          </p>
+        </div>
+      </div>
+      <div class="block-equipe block-equipe-reverse">
+        <div class="leader">
+          <div class="leader__img">
+            <img class="images-team"
+              src="{{ asset('/images_teams/koko.jpg') }}"
+              alt="image_team" />
+          </div>
+          <div class="leader__name">
+            <h2>
+              Conrad LEBLANC
+            </h2>
+            <p>
+              <em>Responsable projet e-commerce & Développeur full-stack</em>
+            </p>
+          </div>
+        </div>
+        <div class="text-bio">
+          <p class="paragraphe-bio">
+            Curieux, sociable, dynamique et très polyvalent.
+
+            Mon parcours est assez varié et combine une vision technique et une
+            vision client/business. Je suis effectivement issu d'une école en
+            marketing digital et avec une formation complémentaire de Concepteur
+            - Développeur d'applications web.
+
+            Après avoir travaillé en tant que chef de projet, j'ai choisi il y a
+            quelques temps de me reconvertir en tant que développeur Full Stack
+            (React.Js et PHP).
+
+            Pourquoi ? Parce que j'aime relever de nouveaux défis, apprendre
+            continuellement de nouvelles choses et que je suis convaincu que
+            nous sommes plus performants lorsque nous nous amusons en
+            travaillant.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

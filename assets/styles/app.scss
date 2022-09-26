@@ -6,6 +6,14 @@
 @use '_elementsjs';
 @use '_nav';
 @use 'index';
+@use 'contacts';
 @use '_nav-responsive-burger';
+@use 'equipe';
+@use 'services';
+@use 'seo';
+
+
+
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '_variables';
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
