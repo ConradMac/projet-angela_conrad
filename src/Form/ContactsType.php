@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Contacts;
+use ReCaptcha\ReCaptcha;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,6 +18,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use VictorPrdh\RecaptchaBundle\Form\ReCaptchaType;
 
 class ContactsType extends AbstractType
 {
@@ -164,6 +166,24 @@ class ContactsType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('captcha', ReCaptchaType::class)
+                // 'label' => false,
+                // 'attr' => [
+                //     'options' => [
+                //         'theme' => 'light',
+                //         'type' => 'image',
+                //         'size' => 'normal',
+                //         'defer' => true,
+                //         'async' => true,
+                //     ],
+                // ],
+                // 'mapped' => false,
+                // 'constraints' => [
+                //     new ReCaptcha([
+                //         'message' => 'Veuillez valider le captcha',
+                //     ]),
+                // ],
+            
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer',
                 'attr' => [

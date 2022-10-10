@@ -22,6 +22,10 @@
         contenu, la mise en page et le style de votre site afn qu’ils soient
         adaptés à l’image de votre société et à votre activité.
       </p>
+      <p>
+        En fonction de vos besoins et de votre budget, nous mettons en place une
+        stratégie digitale gagnante pour générer du trafic et des ventes.
+      </p>
     </div>
     <div class="img">
       <img src="{{ asset('images/digital-marketing-g81424b8b1_1280.jpg') }}"
@@ -35,8 +39,8 @@
       <div class="flipper">
         <div class="front">
           <!-- front content -->
-          <img src="https://picsum.photos/270/180/?random"
-            alt="Image alt text" />
+          <img src="{{ asset('images_index/téléchargement.jpg') }}"
+            alt="image_seo" />
           <div class="block-content">
             <h3>
               31 Oct 2022
@@ -58,11 +62,13 @@
             En bref
           </h3>
           <p>
-            Nous optimisons votre site internet pour les moteurs de recherche ».
-            Nous définirons avec vous l'ensemble des techniques à mettre en
-            place pour améliorer votre visibilité sur les moteurs de recherche.
+            Nous optimisons votre site pour les moteurs de recherche. Nous
+            définirons avec vous l'ensemble des techniques à mettre en place
+            pour améliorer votre visibilité sur le navigateur.
           </p>
-          <a class="button" href="#">Renseignez-vous ici !</a>
+          <a class="button" href="{{ path('app_seo') }}">
+            Renseignez-vous ici !
+          </a>
         </div>
       </div>
     </div>
@@ -70,8 +76,8 @@
       <div class="flipper">
         <div class="front">
           <!-- front content -->
-          <img src="https://picsum.photos/270/180/?random"
-            alt="Image alt text" />
+          <img src="{{ asset('images_index/Mon_proje _(4).jpg') }}"
+            alt="image_dev" />
           <div class="block-content">
             <h3>
               31 Oct 2022
@@ -83,7 +89,8 @@
               Site vitrine
             </div>
             <div class="tag">
-              e-commerce &amp; Shopify
+              e-commerce
+              {# &amp; Shopify #}
             </div>
           </div>
         </div>
@@ -105,8 +112,8 @@
       <div class="flipper">
         <div class="front">
           <!-- front content -->
-          <img src="https://picsum.photos/270/180/?random"
-            alt="Image alt text" />
+          <img src="{{ asset('images_index/wordpress.jpg') }}"
+            alt="image_wordpress" />
           <div class="block-content">
             <h3>
               31 Oct 2022
@@ -118,7 +125,8 @@
               WooCommerce
             </div>
             <div class="tag">
-              formation WordPress &amp; Site E-commerce
+              formation WordPress/ E-commerce
+              {# &amp; Site E-commerce #}
             </div>
           </div>
         </div>
@@ -136,6 +144,37 @@
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <svg version="1.1"
+      id="cadres"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="1500px"
+      height="700px"
+      viewBox="0 0 400 400"
+      enable-background="new 0 0 400 400"
+      xml:space="preserve">
+      <rect id="cadre1"
+        x="82.083"
+        y="81.528"
+        fill="none"
+        stroke="#000000"
+        stroke-width="3"
+        width="540"
+        height="306" />
+
+      <rect id="cadre2"
+        x="61.083"
+        y="60.528"
+        fill="none"
+        stroke="#000000"
+        stroke-width="3"
+        width="518"
+        height="338" />
+    </svg>
   </div>
   <div class="cadre-team">
     <div class="cadre-team-style">
@@ -163,11 +202,11 @@
         </div>
         <div class="picture">
           <img class="images-team"
-            src="{{ asset('images/koko.jpg') }}"
+            src="{{ asset('images_index/photo_de_conrad.jpg') }}"
             alt="image_team" />
           <div class="text">
             <h3>
-              Conrad
+              Conrad de la Vilardière
             </h3>
             <p>
               Développeur web
@@ -221,7 +260,7 @@
       </div>
     </div>
   </div>
-  <div class="text-mission">
+  {# <div class="text-mission">
     <div class="our-mission">
       <h3 class="text-area-subtitle text-area-style">
         Notre mission
@@ -249,7 +288,7 @@
         src="{{ asset('images_index/valeur.jpg') }}"
         alt="image_team" />
     </div>
-  </div>
+  </div> #}
   <div class="wrapper">
     <div class="nos-offres">
       <h2>

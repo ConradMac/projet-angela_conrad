@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{# Regarder le RegistrationController.php pour comprendre la variable qui est envoyé à Twig. #}
+{% form_theme registrationForm 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block body %}
+  {% for flash_error in app.flashes('verify_email_error') %}
+    <div class="alert alert-danger" role="alert">
+      {{ flash_error }}
+    </div>
+  {% endfor %}
+{#  a mettre en forme avec des div et row/col. fichier a suivre, registration form le son controller. #}
+  <legend><section class="container mt-3">
+        <div class="row">
+            <div class="col">
+    <h1>
+      Se connecter
+    </h1>
+  </legend>
+
+  {{ form_start(registrationForm) }}
+  <fieldset>
+    <legend>
+      Informations personnelles
+    </legend>
+    {{ form_row(registrationForm.lastname) }}
+    {{ form_row(registrationForm.firstname) }}
+  </fieldset>
+
+  <fieldset>
+    <legend>
+      Mes coordonnées
+    </legend>
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.phone) }}
+    {{ form_row(registrationForm.address) }}
+    {{ form_row(registrationForm.zipcode) }}
+    {{ form_row(registrationForm.city) }}
+    {{ form_row(registrationForm.country) }}
+
+    {{
+      form_row(
+        registrationForm.plainPassword,
+        {
+          label: 'Mot de Passe'
+        }
+      )
+    }}
+    {{ form_row(registrationForm.agreeTerms) }}
+  </fieldset>
+
+  <button type="submit" class="btn">Register</button>
+  {{ form_end(registrationForm) }}
+ </div>
+        </div>
+    </section>
+{% endblock %}

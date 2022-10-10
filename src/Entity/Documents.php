@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\DocumentsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -23,6 +25,23 @@ class Documents
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
+
+    #[ORM\Column(length: 400, nullable: true)]
+    private ?string $ui_ux = null;
+
+    #[ORM\Column(length: 400, nullable: true)]
+    private ?string $seo = null;
+
+    #[ORM\Column(length: 400, nullable: true)]
+    private ?string $image_service = null;
+
+    #[ORM\ManyToMany(targetEntity: Services::class, inversedBy: 'documents')]
+    private Collection $services;
+
+    public function __construct()
+    {
+        $this->services = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -61,6 +80,66 @@ class Documents
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getUiUx(): ?string
+    {
+        return $this->ui_ux;
+    }
+
+    public function setUiUx(?string $ui_ux): self
+    {
+        $this->ui_ux = $ui_ux;
+
+        return $this;
+    }
+
+    public function getSeo(): ?string
+    {
+        return $this->seo;
+    }
+
+    public function setSeo(?string $seo): self
+    {
+        $this->seo = $seo;
+
+        return $this;
+    }
+
+    public function getImageService(): ?string
+    {
+        return $this->image_service;
+    }
+
+    public function setImageService(?string $image_service): self
+    {
+        $this->image_service = $image_service;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Services>
+     */
+    public function getServices(): Collection
+    {
+        return $this->services;
+    }
+
+    public function addService(Services $service): self
+    {
+        if (!$this->services->contains($service)) {
+            $this->services->add($service);
+        }
+
+        return $this;
+    }
+
+    public function removeService(Services $service): self
+    {
+        $this->services->removeElement($service);
 
         return $this;
     }

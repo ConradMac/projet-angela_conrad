@@ -29,8 +29,9 @@ class ContactsController extends AbstractController
             $contact->setPhone($contact->getPhone());
             $em->persist($contact);
             $em->flush();
-// use function to get hashed password!
+            // use function to get hashed password!
             $this->addFlash('success', 'Votre message a bien été envoyé !');
+            // dd($form);
 
             return $this->redirectToRoute('app_home');
         }

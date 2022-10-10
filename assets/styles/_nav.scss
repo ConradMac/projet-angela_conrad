@@ -69,10 +69,11 @@ header .top-nav {
     text-align: center;
     color: #ddd;
     display: block;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 400;
     height: 45px;
     line-height: 45px;
+    background: #001122;
 }
 
 .top-bar a {
@@ -114,7 +115,7 @@ header .top-nav {
 
 .top-bar .flip-flop .flippety,
 .top-bar .flip-flop .flop {
-    background: #333;
+    background: #001122;
     text-align: center;
     padding: 0 12px;
     height: 45px;
@@ -123,6 +124,7 @@ header .top-nav {
 .top-bar #smallTimer a.cube div.duration {
     height: 45px;
     padding: 0 24px 0 30px;
+    font-size: 17px;
     position: relative;
     text-align: center;
 }
@@ -150,6 +152,7 @@ li {
         li a:hover,
         .dropdown:hover .dropbtn {
             background-color: #333;
+
         }
     }
 
@@ -161,11 +164,12 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background: #001122;
     min-width: 160px;
+    width: 100%;
     // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 25px;
+    // border-radius: 25px;
 }
 
 .dropdown-content a {
@@ -177,12 +181,16 @@ li {
 }
 
 .dropdown-content a:hover {
-    background: linear-gradient(#333, white);
+    background: linear-gradient(#333);
     border-radius: 25px;
+    color: white;
+    // text-decoration: none;
+
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    // text-decoration: none;
 }
 
 // autre changement de nav bar (carré à gauche)

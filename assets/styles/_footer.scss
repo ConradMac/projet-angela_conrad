@@ -79,10 +79,13 @@ footer {
 .schedule-list,
 .media-list {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .services-list li {
     padding: 2px 0;
+
 }
 
 .services-list a {

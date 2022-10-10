@@ -1,16 +1,7 @@
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+:root {
+    --animate-speed: 2s;
+}
 
-// body {
-//     background: #012;
-//     min-height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
 .toto-seo {
     background: #012;
     min-height: 100vh;
@@ -22,118 +13,448 @@
     height: auto;
     color: gray;
 
-}
-
-.circle {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 100vmax;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.page-seo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-family: consolas;
-    color: #fff;
-    text-shadow: 0 0 10px #0ff;
-    font-size: 17px;
-    animation: textRotation 8s linear infinite;
-}
-
-.logo-seo {
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    background: url("https://assets.codepen.io/7344750/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1657025755&width=512");
-    background-size: cover;
-    border-radius: 100vmax;
-    background-position: center;
-}
-
-.page-seo span {
-    position: absolute;
-    left: 50%;
-    font-size: 1.2em;
-    transform-origin: 0 100px;
-}
-
-// -----------------------------------
-
-.main-page-seo {
-    .block-page-seo {
+    .circle {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 100vmax;
+        display: flex;
         align-items: center;
-        margin-top: 7%;
-        margin: 5%;
-    }
-}
+        justify-content: center;
 
-.bouton-seo {
-    width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    gap: 1em;
-    margin-top: 2%;
-
-    .bouton-contactez {
-        margin: 0 auto;
-        border: 0;
-        width: 15em;
-        height: 3em;
-        font-size: 17px;
-        background: white;
-        filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.5));
-        // box-shadow: 30px 5px rgba(0, 0, 0, 0.2);
-
-
-        // cela permet de faire un effet de transition sur le bouton (avant et apres), before et after servent à créer un effet de transition de la ligne de couleur
-        &::before,
-        &::after {
-            content: "";
-            transition: all 0.75s ease-in-out;
-
-        }
-
-        // cela permet de créer une ligne de couleur qui suit le curseur de la souris, avant le passage de la souris
-        &::before {
+        .logo-seo {
             position: absolute;
-            width: 10px;
-            height: 30px;
-            left: -1px;
-            bottom: -1px;
-            border-right: 3px solid gray;
-            border-top: 3px solid gray;
-            transforM: rotate(180deg); // permet de faire une rotation de 180 degrés
+            width: 140px;
+            height: 140px;
+            background: url("https://assets.codepen.io/7344750/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1657025755&width=512");
+            background-size: cover;
+            border-radius: 100vmax;
+            background-position: center;
         }
 
-        // &::after ici on crée une ligne de couleur qui suit le curseur de la souris quand on quite la souris du bouton qui revient a son origine apres le passage de la souris
-        &::after {
+        .page-seo {
             position: absolute;
-            width: 30px;
-            height: 30px;
-            top: -1px;
-            right: -1px;
-            border-right: 3px solid gray;
-            border-top: 3px solid gray;
-        }
-
-        // les deux elements ici sont la taille et la hauteur du bouton avant le passage de la souris et quand la souris quitte le bouton
-        &:hover:before,
-        &:hover:after {
             width: 100%;
             height: 100%;
+            font-family: consolas;
+            color: #fff;
+            text-shadow: 0 0 10px #0ff;
+            font-size: 17px;
+            animation: textRotation 8s linear infinite;
+        }
+
+        .page-seo span {
+            position: absolute;
+            left: 50%;
+            font-size: 1.2em;
+            transform-origin: 0 100px;
         }
     }
 
+    .main-page-seo {
+        .block-page-seo {
+            align-items: center;
+            margin-top: 7%;
+            margin: 5%;
+
+            .animated-block-image {
+                transform: translateX(-100vw);
+                animation: ease-from-left var(--animate-speed) ease 3s 1 forwards;
+                display: flex;
+                width: 100%;
+                align-items: center;
+
+                .images-seo {
+                    border-radius: 50%;
+                    height: 50vh;
+                    margin-left: 10%;
+                    width: 25vw;
+                }
+            }
+
+            .animated-block-left {
+                transform: translateX(-100vw);
+                animation: ease-from-left var(--animate-speed) ease 1.5s 1 forwards;
+            }
+
+            .animated-block-right {
+                transform: translateX(100vw);
+                animation: ease-from-right var(--animate-speed) ease 1.5s 1 forwards;
+
+                &.contenu-page-seo {
+                    margin-top: 4%;
+                }
+            }
+
+            // .animated-block-top {
+            //     transform: translateY(-100vh);
+            //     // animation: ease-from-top var(--animate-speed) ease forwards;
+            // }
+        }
+
+        .bouton-fin-page-seo {
+            margin-bottom: 4%;
+        }
+
+    }
 }
+
+.seo-titre-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+    .titre-seo {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.accordion-seo {
+    // accordeons class classique 
+    // background-color: aliceblue;
+    font-size: 20px;
+    // width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    align-items: center;
+
+    .accordion-block {
+        text-align: center;
+        width: 80%;
+    }
+
+    // box.active rep
+    .accordion-block.active .content {
+        height: 100px;
+        padding: 10px;
+
+        .accordion-block:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .accordion-block.active .accordion-titre::before {
+        content: '-'; // represente le moins lors du click. (ouverture onglet)
+    }
+
+    .accordion-titre {
+        background-color: #222831;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        border-radius: 25px;
+        font-size: 23px;
+    }
+
+    .accordion-titre::before {
+        content: '+'; // reprensente le + lorsque l'onglet n'est pas encore clické.
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .content {
+        font-size: 14px;
+        background-color: #EEEEEE;
+        overflow: hidden; // permet de cacher le contenu de l'onglet
+        // overflow-y: auto; // permet de faire defiler le contenu de l'onglet. A voir ave cnuno si on garde ou pas.
+        height: 0;
+        position: relative;
+        transition: all 1s ease; // permet de faire une animation lors de l'ouverture de l'onglet en 1 seconde
+        border-radius: 15px;
+        font-weight: bold;
+
+        .content::-webkit-scrollbar {
+            // permet de cacher la barre de defilement, à utiliser avec parsimony
+            display: none;
+        }
+    }
+}
+
+.frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.container {
+    .custom-btn {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+            4px 4px 5px 0px rgba(0, 0, 0, .1);
+        outline: none;
+
+        &.btn-12 {
+            position: relative;
+            right: 20px;
+            bottom: 20px;
+            border: none;
+            box-shadow: none;
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            -webkit-perspective: 230px;
+            perspective: 230px;
+
+            &.btn-12 span {
+                background: gray;
+                background: linear-gradient(gray);
+                display: block;
+                position: absolute;
+                width: 50vh;
+                height: 40px;
+                // box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                //     7px 7px 20px 0px rgba(0, 0, 0, .1),
+                //     4px 4px 5px 0px rgba(0, 0, 0, .1);
+                // border-radius: 5px;
+                margin: 0;
+                text-align: center;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-transition: all .3s;
+                transition: all .3s;
+            }
+        }
+    }
+
+    .btn-12 span:nth-child(1) {
+        // box-shadow:
+        //     -7px -7px 20px 0px #fff9,
+        //     -4px -4px 5px 0px #fff9,
+        //     7px 7px 20px 0px #0002,
+        //     4px 4px 5px 0px #0001;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12 span:nth-child(2) {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12:hover span:nth-child(1) {
+        // box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        //     7px 7px 20px 0px rgba(0, 0, 0, .1),
+        //     4px 4px 5px 0px rgba(0, 0, 0, .1);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    .btn-12:hover span:nth-child(2) {
+        // box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        //     7px 7px 20px 0px rgba(0, 0, 0, .1),
+        //     4px 4px 5px 0px rgba(0, 0, 0, .1);
+        color: transparent;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+    }
+
+    button {
+        margin: 20px;
+    }
+}
+
+// // ---- NEWSLETTER ----
+
+
+// #newsletter {
+//     /* min-height: 70vh; */
+//     width: 100%;
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+
+//     // .picture {
+//     //     width: 50%;
+//     //     background: url(https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGxhcHRvcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) no-repeat center center/cover;
+//     // }
+
+//     .welcome {
+//         background-color: #fff;
+//         width: 100%;
+//         padding: 5%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//         .welcome h2 {
+//             font-size: 2.5em;
+//             font-weight: bold;
+//             text-transform: uppercase;
+//             margin-bottom: 30px;
+//         }
+
+//         .welcome p {
+//             text-transform: capitalize;
+//             font-size: 1em;
+//             color: rgba(51, 51, 51, .7);
+//             margin-bottom: 30px;
+//         }
+//     }
+
+//     .welcome form {
+//         background-color: #333;
+//         display: flex;
+//         width: 50%;
+//         text-align: center;
+//         justify-content: center;
+//         display: flex;
+//         /*justify-content: center;
+//     */
+//         border-radius: 20px;
+//         -webkit-border-radius: 20px;
+//         -moz-border-radius: 20px;
+//         -ms-border-radius: 20px;
+//         -o-border-radius: 20px;
+
+//         input {
+//             border: none;
+//             outline: none;
+//             background-color: transparent;
+//             padding: 15px 20px;
+//             color: #fff;
+//             /* flex: 1; */
+//         }
+//     }
+
+//     form input[type='email'] {
+//         flex: 1;
+//         font-size: 1.3em;
+
+//     }
+
+//     form input[type='submit'] {
+//         /* background-color: #fff; */
+//         color: #fff;
+//         border-left: 2px solid #f1f1f1;
+//         cursor: pointer;
+//         text-transform: uppercase;
+//         font-size: 1.3em;
+//         font-weight: bold;
+//     }
+
+//     form input[type='submit']:hover {
+//         opacity: .7;
+//     }
+// }
+
+// @media screen and (max-width: 1079px) {
+//     #newletter {
+//         flex-direction: column;
+//     }
+
+//     // .picture {
+//     //     width: 100%;
+//     //     height: 300px;
+//     // }
+
+//     .welcome {
+//         padding: 50px 20%;
+//         width: 100%;
+//         /* margin: 0 auto; */
+//     }
+// }
+
+// @media screen and (max-width: 775px) {
+//     form input[type='email'] {
+//         font-size: 1em;
+//     }
+// }
+
+// @media screen and (max-width: 600px) {
+//     .welcome {
+//         width: 100%;
+//         padding: 80px 30px;
+//     }
+
+//     .welcome form {
+//         background-color: transparent;
+//         display: flex;
+//         flex-wrap: wrap;
+//         flex-direction: column;
+//         border-radius: 0;
+//         -webkit-border-radius: 0px;
+//         -moz-border-radius: 0px;
+//         -ms-border-radius: 0px;
+//         -o-border-radius: 0px;
+//     }
+
+//     form input[type='email'] {
+//         font-size: 1em;
+//         border-bottom: 1px solid #333;
+//         color: #333;
+//     }
+
+//     ::placeholder {
+//         font-size: large;
+//         color: #333;
+//         opacity: .5;
+//     }
+
+//     form input[type='submit'] {
+//         color: #fff;
+//         border-left: none;
+//         background-color: #333;
+//         width: 100px;
+//         margin: 20px auto;
+//         font-size: 1em;
+//     }
+// }
+
+// @media screen and (max-width: 500px) {
+//     .welcome {
+//         padding: 80px 20px;
+//     }
+// }
+
+
 
 @keyframes textRotation {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes ease-from-right {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes ease-from-left {
+    to {
+        transform: translateX(0);
     }
 }
