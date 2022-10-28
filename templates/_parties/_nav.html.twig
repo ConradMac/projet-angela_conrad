@@ -1,5 +1,5 @@
 {% block stylesheets %}
-  <link rel="stylesheet" href="{{ asset('assets/styles/_nav.scss') }}" />
+
 {% endblock %}
 <div class="top-nav contain-to-grid wrapper">
   <nav class="top-bar">
@@ -28,8 +28,8 @@
         <a href="javascript:void(0)" class="dropbtn">Services</a>
         <div class="dropdown-content">
           <a href="{{ path('app_seo') }}">SEO</a>
-          <a href="#">E-Commerce Shopify/ WordPress</a>
-          <a href="#">Création site Internet</a>
+          <a href="{{ path('app_shopify') }}">E-Commerce Shopify/ WordPress</a>
+          <a href="{{ path('app_developpement') }}">Création site Internet</a>
         </div>
       </li>
 

@@ -49,24 +49,6 @@
     }
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-// html {
-//     box-sizing: border-box;
-// }
-
-// *,
-// *:before,
-// *:after {
-//     box-sizing: inherit;
-// }
-
-// body {
-//     background: #f2f2f2;
-//     font-family: Arial, sans-serif;
-//     color: #000;
-//     padding: 20px;
-// }
-
 h3 {
     font-size: 16px;
 }
@@ -222,9 +204,6 @@ span .h3,
     .cadre-team-style {
         text-align: center;
         width: 50%;
-        // ajout pour cadre 
-        // position: relative;
-        // bottom: 635px;
 
         &.cadre-team-style p {
             margin-top: 4%;
@@ -335,9 +314,6 @@ span .h3,
 
 .wrapper {
     display: flex;
-    // width: 48rem;
-    // grid-template-columns: 12rem auto;
-    // column-gap: 1rem;
     background-color: #eee;
     width: 100%;
     align-items: center;
@@ -390,7 +366,7 @@ span .h3,
 
 .text-block-area {
     width: 600px;
-    background-color: #15153C;
+    background-color: #800000;
     border-radius: 25px;
     $field-font-size: 15px;
     text-align: start;
@@ -409,29 +385,6 @@ span .h3,
     line-height: 2;
     height: 250px;
 }
-
-// .rouge {
-//     // background-color: red;
-//     color: rgb(0, 0, 0);
-//     height: 250px;
-// }
-
-// .jaune {
-//     // background-color: yellow;
-//     color: rgb(0, 0, 0);
-//     height: 250px;
-// }
-
-// .violet {
-//     // background-color: purple;
-//     color: rgb(0, 0, 0);
-//     height: 250px;
-// }
-
-// .black {
-//     color: rgb(0, 0, 0);
-//     height: 250px;
-// }
 
 /*style des cadres*/
 #cadres {

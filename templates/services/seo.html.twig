@@ -1,18 +1,24 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base.html.twig' %}
 {% block title %}
-  SEO
+  SEO - Le Référencement Naturel
 {% endblock %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{{ asset('assets/styles/developpementWeb.scss') }}">
+{% endblock %}
+
 {% block body %}
-  <main class="toto-seo">
+  <main class="main-block-services">
     {# <div> #}
-    <div class="circle">
-      <div class="logo-seo"></div>
-      <div class="page-seo">
-        <p>
-          SEO - SEO - SEO - SEO - SEO - SEO -
-        </p>
-      </div>
-    </div>
+    {# <div class="circle">
+          <div class="logo-seo"></div>
+          <div class="page-seo">
+            <p>
+              SEO - SEO - SEO - SEO - SEO - SEO -
+                      
+            </p>
+          </div>
+        </div> #}
     {# </div> #}
     <div class="main-page-seo">
       <div class="row block-page-seo">
@@ -32,7 +38,6 @@
               adaptées à votre budget.
             </p>
           </div>
-          {# </div> #}
           <div class="col-12 col-lg-6">
             <div class="image-page-seo">
               <img class="images-seo"
@@ -56,11 +61,12 @@
           </p>
         </div>
       </div>
-      <div class="container titi">
-        <button class="custom-btn btn-12">
-          <span>N'hesitez pas à nous contacter !</span><span>Vous êtes interresé
-            ?</span>
-        </button>
+      {# code nuno help :) #}
+      <div class="container button-seo">
+        <a href="http://" class="custom-btn-seo btn-12">
+          <span>N'hesitez pas à nous contacter !</span>
+          <span>Vous êtes interessé ?</span>
+        </a>
       </div>
       <div class="row block-page-seo">
         <div class="referencement-seo">
@@ -68,7 +74,7 @@
             <h2 class="titre-reference-naturel">
               Qu'est ce que le référencement naturel ?
             </h2>
-            <p>
+            <p class="contenu-para-seo">
               Le SEO (Search Engine Optimization) est l’art d’améliorer le
               positionnement d’un site et d’augmenter le trafic. Par exemple,
               vous possédez un site Web qui vend des chaussures en cuir et de la
@@ -89,7 +95,7 @@
             <h2 class="titre-reference-naturel">
               Notre rôle en tant qu'agence de référencement naturel
             </h2>
-            <p>
+            <p class="contenu-para-seo">
               Notre travail doit penser aux actions que l'on devra entreprendre
               dans le cadre d’une stratégie globale de votre société. Pourquoi ?
               Le référencement fait partie d’une stratégie digitale qui doit
@@ -113,28 +119,26 @@
         <div class="referencement-seo">
           <div class="block-referencement-naturel animated-block-left">
             <h2 class="titre-reference-naturel">
-              Notre philosophie
+              Shopify
             </h2>
-            <p>
-              Pour nous, l’objectif premier est de réussir à vous faire réaliser
-              vos objectifs, de vente, de présence ou de notoriété. Nous
-              étudions vos problématiques et analysons votre site. Quels sont
-              vos acquis, quels points sont à améliorer et lesquels sont
-              inexistants ? Nous nous assurons que tout soit fait pour
-              satisfaire vos attentes et celles de votre cible.
+            <p class="contenu-para-seo">
+              Vous cherchez une agence web spécialisée dans la création de site
+              Shopify ? Vous êtes au bon endroit ! Chez Beyonds, nous sommes
+              experts dans la création de sites e-commerce sous Shopify.
             </p>
-            <p>
-              Nous abordons les choses sous un angle global en travaillant tous
-              les leviers (technologie liée au site web, SEO, SEA, remarketing,
-              linkbuilding, réseaux sociaux, ..). La plupart des agences web
-              sont axés sur la technicité des sites web. Pourtant, une fois un
-              site mis en ligne, il faut l’entretenir et l’optimiser pour
-              attirer du trafic et que celui-ci soit qualitatif.
-            </p>
-            <p>
-              Que ce soit pour un projet partant de zéro, une refonte ou une
-              optimisation d’un site déjà crée, les services que nous proposons
-              sauront s’accorder à vos besoins ainsi qu’à votre budget.
+            <p class="contenu-para-seo">
+              Les boutiques en ligne Shopify comportent un référencement naturel
+              intégré et des fonctionnalités pour vous aider à optimiser votre
+              contenu. Une partie du référencement naturel est prise en charge
+              de manière automatique : des balises canoniques générées
+              automatiquement sont ajoutées aux pages pour empêcher le contenu
+              dupliqué d'apparaitre dans les résultats de recherche. Les
+              fichiers sitemap.xml et robots.txt de votre site web sont générés
+              automatiquement et les thèmes génèrent automatiquement des balises
+              de titre qui comportent le nom de votre boutique. De plus, les
+              thèmes sont tenus de présenter des options de liens et de partage
+              pour les médias sociaux afin de faciliter la promotion de votre
+              boutique.
             </p>
           </div>
         </div>
@@ -196,17 +200,17 @@
             <h2 class="titre-reference-naturel">
               Pourquoi notre agence est faite pour vous ?
             </h2>
-            <p>
+            <p class="contenu-para-seo">
               Pour nous le référencement doit être collaboratif. Angela et
               Conrad travailleront main dans la main avec leurs clients, car ce
               sont eux qui sont les plus au courant du secteur d’activité dans
               lequel ils évoluent.
             </p>
-            <p>
+            <p class="contenu-para-seo">
               Ils connaissent le millieu du commerce, du digital. Nous sommes
               toutefois spécialisés dans les PME / TPE.
             </p>
-            <p>
+            <p class="contenu-para-seo">
               Nos prestations de référencement s’adaptent à vos besoins. Angela
               et Conrad pourront donc vous proposer un service allant d’une
               simple prestation de recherche de lien à un service complet de
@@ -215,30 +219,249 @@
           </div>
         </div>
       </div>
-      <div class="container bouton-fin-page-seo">
-        <button class="custom-btn btn-12">
-          <span>Nous sommes là pour vous</span><span>Vous désirez un devis ?</span>
-        </button>
+      <div class="container button-seo">
+        <a href="#" class="custom-btn-seo btn-12">
+          <span>Nous sommes là pour vous</span>
+          <span>Vous désirez un devis ?</span>
+        </a>
       </div>
-      {# <section id="newsletter">
-        {# <div class="picture"></div> #}
-        <article class="welcome">
-          <h2>
-            Ne ratez pas nos infos mensuels
-          </h2>
-          <p>
-            Nos newsletters sont basées sur des informations utiles pour un site
-            internet éfficace.
+      <div class="list_block_area">
+        <div class="seo_need">
+          <h3 class="subtitle_seo">
+            Est-ce que le référencement SEO est adapté pour mon besoin ?
+          </h3>
+          <p class="contenu-para-seo">
+            Levier d’acquisition incontournable pour n’importe quel site web, le
+            référencement SEO présente un intérêt en vue d’atteindre des
+            objectifs commerciaux mais pas uniquement… Vous pourrez ainsi
+            travailler votre image de marque, gérer votre e-réputation, changer
+            votre cible marketing, fidéliser votre clientèle, améliorer la
+            relation client ou encore affiner vos données de webanalytics.
+            Cependant, la première page de Google se mérite et le référencement
+            naturel présente certaines contraintes. Dès la réalisation d’un
+            devis de référencement SEO, une agence pourra vous aider à
+            comprendre les besoins et les possibilités de cette discpline.
           </p>
-          <form action="">
-            <input type="email"
-              name=""
-              id=""
-              placeholder="Indiquez-nous votre email ..." />
-            <input type="submit" value="Rejoignez-nous" />
-          </form>
-        </article>
-      </section> #}
+        </div>
+        <div class="block_checked_warning_seo">
+          <div class="MOM">
+            <div class="block_checked_warning">
+              <div class="checked_block_theNeed">
+                <div class="list_proposition">
+                  <p class="titre_block">
+                    Vous avez besoin de
+                  </p>
+                </div>
+              </div>
+              <div class="text_block">
+                <ul class="list_need_seo contenu-para-seo">
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Vous rendre visible sur les premiers résultats de
+                          Google
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined checked_icon_color">
+                          done
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Attirer plus de trafic et de meilleure qualité
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined checked_icon_color">
+                          done
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Orienter le trafic vers les bonnes pages
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined checked_icon_color">
+                          done
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Générer durablement des leads et des ventes
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined checked_icon_color">
+                          done
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          ptimiser votre taux de conversion
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined checked_icon_color">
+                          done
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="block_checked_warning">
+              <div class="be_ready_to_seo">
+                <div class="list_proposition">
+                  <p class="titre_block">
+                    Êtes-vous prêt à
+                  </p>
+                </div>
+              </div>
+              <div class="text_block">
+                <ul class="list_need_seo contenu-para-seo">
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Affronter une concurrence féroce
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined warning_icon_color">
+                          warning
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Prendre votre temps
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined warning_icon_color">
+                          warning
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Faire des efforts à long terme
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined warning_icon_color">
+                          warning
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Respecter les règles et les consignes
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined warning_icon_color">
+                          warning
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="list_paragraph">
+                      <div>
+                        <p>
+                          Ne pas avoir de garanties
+                        </p>
+                      </div>
+                      <div>
+                        <i class="material-symbols-outlined warning_icon_color">
+                          warning
+                        </i>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <img src="{{ asset('images_outils_seo/GA.png') }}"
+              alt="image_google-analytics" />
+            </div>
+            <div class="slide">
+              <img src="{{ asset('images_outils_seo/ahref.png') }}"
+              alt="image_google-analytics" />
+            </div>
+            <div class="slide">
+              <img src="{{ asset('images_outils_seo/screaming_frog.png') }}"
+              alt="image_google-analytics" />
+            </div>
+            <div class="slide">
+              <img src="{{ asset('images_outils_seo/googleSpeedInsights.png') }}"
+              alt="image_google-analytics" />
+            </div>
+            <div class="slide">
+              <div class="outil_referencement">
+            <img src="{{ asset('images_outils_seo/ubersuggest.png') }}"
+              alt="image_google-analytics" />
+            </div>
+          </div>
+        </div>
+        {# <div class="images_outil_referencement">
+          <div class="outil_referencement">
+            <img src="{{ asset('images_outils_seo/GA.png') }}"
+              alt="image_google-analytics" />
+          </div>
+          <div class="outil_referencement">
+            <img src="{{ asset('images_outils_seo/ahref.png') }}"
+              alt="image_google-analytics" />
+          </div>
+          <div class="outil_referencement">
+            <img src="{{ asset('images_outils_seo/screaming_frog.png') }}"
+              alt="image_google-analytics" />
+          </div>
+          <div class="outil_referencement">
+            <img src="{{ asset('images_outils_seo/ubersuggest.png') }}"
+              alt="image_google-analytics" />
+          </div>
+          <div class="outil_referencement">
+            <img src="{{ asset('images_outils_seo/googleSpeedInsights.png') }}"
+              alt="image_google-analytics" />
+          </div>
+        </div> #}
+      </div>
     </div>
   </main>
 {% endblock %}

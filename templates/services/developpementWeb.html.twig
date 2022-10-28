@@ -1,0 +1,248 @@
+{% extends 'base.html.twig' %}
+
+{# {% block stylesheet %}
+  <link rel="stylesheet" href="{{ asset('scss/developpementWeb.scss') }}" />
+{% endblock %} #}
+
+{% block title %}
+  Création de site sur-mesure
+{% endblock %}
+
+{% block body %}
+  <div class="block_half_image_text">
+    <div class="container">
+      <div class="block_introduction_dev">
+        <div class="row styleEachBlock">
+          <div class="col-8 col-lg-6">
+            <div>
+              <h1 class="title_page_dev">
+                <span>ENTREPRISE DE DÉVELOPPEMENT WEB SUR MESURE À PARIS</span>
+              </h1>
+            </div>
+            <div class="contenu_developpementWeb">
+              <p>
+                Vous avez une entreprise ? Vous cherchez une agence de
+                développement des projets web sur mesure en France pour mettre
+                en place un logiciel, une application web ou plateforme en ligne
+                contenant des besoins spécifiques ? Une solution sécurisée,
+                élégante, performante et développée avec les nouvelles
+                technologies ?
+              </p>
+
+              <p>
+                M.K met à votre disposition ses experts web pour cerner les
+                besoins digitaux de votre activité, développer votre outil
+                spécifique selon vos exigences et vous accompagner tout au long
+                de la période de développement, les phases de test et les
+                premiers mois d’utilisation de votre outil.
+              </p>
+              <p>
+                Notre équipe travaille et sont expert dans leur domaine ce qui a
+                permis à notre agence d’être sur le marché depuis 2022, dans le
+                domaine de développement web sur-mesure et de proposer à sa
+                clientèle des solutions technologiques, économiques et
+                parfaitement adaptées à leurs domaines d’activités.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="image_developpement_web">
+              <img class="image_agence_team_dev"
+                src="{{
+                asset(
+                  'images_developpementWeb/developpeur_developpement_equipe.jpg'
+                )
+                }}"
+                alt="image_agence" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="block_confidentialiteWeb styleEachBlock">
+        <h2 class="subtitle_page_dev styleEachBlock">
+          UN PARTENAIRE DIGITAL QUI VOUS RASSURE SUR LA CONFIDENTIALITE DE VOS
+          DONNEES
+        </h2>
+        <p>
+          Nous sommes conscients que les informations et données confidentielles
+          sont nombreuses dans la vie des affaires, pour cette raison, nous
+          insistons sur la protection de l’idée de votre projet à travers un
+          accord de confidentialité présenté à chaque client avant la réception
+          de son cahier des charges.
+        </p>
+        <div class="container button-seo">
+          <a href="#" class="custom-btn-seo btn-12">
+            <span>N'hesitez pas à nous contacter !</span>
+            <span>Vous êtes interessé ?</span>
+          </a>
+        </div>
+      </section>
+    </div>
+    <div class="container lolo">
+      <h2 class="subtitle_blocks_services">
+        NOS PRESTATIONS
+      </h2>
+      <div class="row styleEachBlock">
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <span class="material-symbols-outlined">code_blocks</span>
+            </div>
+            <h3 class="titre_services_dev">
+              Developpement Web
+            </h3>
+            <p class="paragraph_services_dev">
+              Nous développons des applications web sur mesure pour les
+              entreprises de toute taille.
+              <a href="#">Lire plus</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <span class="material-symbols-outlined">language</span>
+            </div>
+            <h3 class="titre_services_dev">
+              Le Web
+            </h3>
+            <p class="paragraph_services_dev">
+              Nous créons des sites web sur-mesure qui s’adaptent à vos besoins
+              et aux objectifs de votre entreprise .
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <i class="fa fa-apple"></i>
+            </div>
+            <h3 class="titre_services_dev">
+              RGPD
+            </h3>
+            <p class="paragraph_services_dev">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
+              ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <span class="material-symbols-outlined">design_services</span>
+            </div>
+            <h3 class="titre_services_dev">
+              UX/UI
+            </h3>
+            <p class="paragraph_services_dev">
+              En fonction de votre projet, vos objectifs, nous intervenons pour
+              vous présenter une solution web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container lolo">
+      <div class="row styleEachBlock second_block_services">
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <span class="material-symbols-outlined">work</span>
+            </div>
+            <h3 class="titre_services_dev">
+              Notre Méthode
+            </h3>
+            <p class="paragraph_services_dev">
+              Nous développons des applications web sur mesure pour les
+              entreprises de toute taille.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <span class="material-symbols-outlined">language</span>
+            </div>
+            <h3 class="titre_services_dev">
+              Cahier des charges
+            </h3>
+            <p class="paragraph_services_dev">
+              Nous créons des sites web sur-mesure qui s’adaptent à vos besoins
+              et aux objectifs de votre entreprise.
+            </p>
+          </div>
+        </div>
+        {# <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <i class="fa fa-apple"></i>
+            </div>
+            <h3 class="titre_services_dev">
+              RGPD
+            </h3>
+            <p class="paragraph_services_dev">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
+              ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+            <div class="service_icon">
+              <span class="material-symbols-outlined">design_services</span>
+            </div>
+            <h3 class="titre_services_dev">
+              UX/UI
+            </h3>
+            <p class="paragraph_services_dev">
+              En fonction de votre projet, vos objectifs, nous intervenons pour
+              vous présenter une solution web.
+            </p>
+          </div>
+        </div> #}
+      </div>
+      <div class="container block_area_icons_languages">
+        <h2 class="subtitle_blocks_services icons_technologie_dev">
+          NOS TECHNOLOGIES
+        </h2>
+        <p class="paragraph_services_dev paragraph_services_technologie">
+          Les technologies exploitées pour le développement des applications
+          métier sur-mesure. Faites appel à des spécialistes hautement
+          expérimentés en développement de bureau, Web et mobile . Nos
+          développeurs utilisent les dernières technologies, Framework et
+          composants pour créer des solutions qui combinent un back-end
+          technique solide avec un design moderne facile à utiliser .
+        </p>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/PHP-1.jpg') }}"
+                alt="image de l'icone du langage php" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/python-1.jpg') }}"
+                alt="image de l'icone du langage Python" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/react-1.jpg') }}"
+                alt="image de l'icone du langage Reactjs" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/symfony-1.jpg') }}"
+                alt="image de l'icone du langage Symfony" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/angular-1.jpg') }}"
+                alt="image de l'icone du langage Angular" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

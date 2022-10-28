@@ -1,6 +1,3 @@
-// body {
-//     background-color: yellow; // ordre de code important !!!!
-// }
 @use 'faq';
 @use '_footer';
 @use '_elementsjs';
@@ -11,7 +8,9 @@
 @use 'equipe';
 @use 'services';
 @use 'seo';
-@use '_newsletter';
+@use 'newsletter';
+@use 'shopify';
+@use 'developpementWeb';
 
 
 

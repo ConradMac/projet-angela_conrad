@@ -55,6 +55,21 @@ class HomeController extends AbstractController
             
         ]);
     }
-    
+
+    #[Route('/shopify', name: 'app_shopify')] // on retire Home pour que la page symfony 6.4.1 soit la page d'accueil
+    public function services_shopify(): Response
+    {
+        return $this->render('services/shopify.html.twig', [
+            
+        ]);
+    }
+
+    #[Route('/developpement', name: 'app_developpement')] // on retire Home pour que la page symfony 6.4.1 soit la page d'accueil
+    public function services_developpement(): Response
+    {
+        return $this->render('services/developpementWeb.html.twig', [
+            
+        ]);
+    }
 }
 
