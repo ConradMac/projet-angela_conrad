@@ -19,6 +19,7 @@ class ContactsController extends AbstractController
     public function index(Request $request, EntityManagerInterface $em, MailerInterface $mailer): Response
     
     {
+        $titre_seo = 'Nous contacter';
         $contact = new Contacts();
         $form = $this->createForm(ContactsType::class, $contact);
         $form->handleRequest($request);
@@ -56,6 +57,7 @@ class ContactsController extends AbstractController
         }
         return $this->render('contacts/index.html.twig', [
             'form' => $form->createView(),
+            'titre_seo' => $titre_seo
         ]);
             
     }

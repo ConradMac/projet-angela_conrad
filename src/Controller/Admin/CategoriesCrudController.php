@@ -15,15 +15,12 @@ class CategoriesCrudController extends AbstractCrudController
         return Categories::class;
     }
 
-    
     public function configureFields(string $pageName): iterable
     {
         return [
             TextField::new('name')->setlabel('Nom'),
             SlugField::new('slug')->setTargetFieldName('name')->setlabel('Slug'),
             ImageField::new('images')->setBasePath('images/')->setUploadDir('public/images/')->setlabel('Images'),
-            
-            
         ];
     }
     

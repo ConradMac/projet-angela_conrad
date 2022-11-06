@@ -11,8 +11,12 @@
 @use 'newsletter';
 @use 'shopify';
 @use 'developpementWeb';
+@use 'slider';
 
 
 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&display=swap');
 @import '_variables';
+@import 'slider';
+@import 'boutons';

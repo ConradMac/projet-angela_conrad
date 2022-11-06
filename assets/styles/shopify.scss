@@ -5,21 +5,45 @@
     display: flex;
     margin-bottom: 5%;
     align-items: center;
-}
 
-.circle_shopify {
-    margin-bottom: 15%;
+
+
+
+    @media screen and (max-width: 1000px) {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
 }
 
 .contenu-para-shopify {
     width: 100%;
     line-height: 2em;
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 .block_shopify_proposition {
     display: flex;
     justify-content: space-around;
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+
+    }
+
 }
+
+
+
 
 .main-block-services {
     background: white;
@@ -28,15 +52,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 0;
     height: auto;
     color: black;
+    font-family: 'raleway', sans-serif;
+    margin-top: 7%;
+
+    .block-page-shopify {
+        margin-top: 4%;
+    }
+
 }
 
 .text-shopify-area {
     padding: 4%;
-    width: 50% !important;
+    width: 50%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100% !important;
+    }
+
 }
+
+
 
 .images-shopify {
     border-radius: 16px;
@@ -56,11 +94,13 @@
     padding: 0 2rem;
     height: 100%;
 
-    .grid {
+    .block_all_price {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 4%;
         padding: 12% 0;
+
+
 
         .card {
             padding: 15%;
@@ -129,7 +169,7 @@
 
 
 @media only screen and (max-width: 1024px) {
-    .grid {
+    .block_all_price {
         grid-template-columns: 1fr 1fr;
         gap: 2%;
 
@@ -137,7 +177,7 @@
 }
 
 @media only screen and (max-width: 425px) {
-    .grid {
+    .block_all_price {
         grid-template-columns: 1fr;
         gap: 2%;
         padding-bottom: 25%;

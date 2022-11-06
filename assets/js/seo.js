@@ -1,11 +1,36 @@
-// const text = document.querySelector(".page-seo");
-// text.innerHTML = text.innerText
-//     .split("")
-//     .map(
-//         (char, i) =>
-//             `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
-//     )
-//     .join("");
+document.addEventListener("DOMContentLoaded", function (event) {
+    const scroll = document.querySelector("#global-test");
+    console.log(scroll.offsetTop);
+    const block_gauche_list = document.querySelectorAll(".before_left");
+    const block_droit_list = document.querySelectorAll(".before_right");
+
+    window.addEventListener("scroll", function () {
+        // au scroll, faire apparaitre le block animated-block-left et right.
+
+        // si le scroll est superieur a la position de global-test
+        for (let i = 0; i < block_gauche_list.length; i++) {
+            // pour chaque element de la liste
+            if (
+                window.scrollY > block_gauche_list[i].offsetTop - 300 &&
+                !block_gauche_list[i].classList.contains("animated-block-left")
+            ) {
+                block_gauche_list[i].classList.add("animated-block-left"); // ajouter la class animated-block-left
+                console.log("un bloc gauche apparait");
+            }
+        }
+
+        for (let b = 0; b < block_droit_list.length; b++) {
+            console.log("coucou");
+            if (
+                window.scrollY > block_droit_list[b].offsetTop - 300 &&
+                !block_droit_list[b].classList.contains("animated-block-right")
+            ) {
+                block_droit_list[b].classList.add("animated-block-right"); // ajouter la class animated-block-left
+                console.log("un bloc droit apparait");
+            }
+        }
+    });
+});
 
 // Code pour l'accordéon SEO
 

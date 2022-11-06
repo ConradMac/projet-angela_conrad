@@ -37,7 +37,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         line-height: 1.2;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        // text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     // & .presentation_seo {
@@ -189,7 +189,21 @@ span .h3,
     display: flex;
     justify-content: space-around;
     margin-top: 70px;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 425px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
+
 
 .cadre-team {
     display: flex;
@@ -247,6 +261,10 @@ span .h3,
         text-decoration: underline;
         text-align: center;
         margin-top: 2%;
+
+        span.qui_est_vous {
+            color: #800000;
+        }
     }
 
     .four-cadres {
@@ -257,6 +275,14 @@ span .h3,
         margin-top: 4%;
         margin-bottom: 4%;
         text-align: center;
+        align-items: center;
+
+        @media screen and (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+
+        }
+
 
         .cadre {
             margin-right: 5%;
@@ -326,7 +352,16 @@ span .h3,
     align-items: center;
     justify-content: center;
     height: 30em;
+
+    @media screen and (max-width: 520px) {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-top: 16%;
+    }
+
 }
+
 
 .mes-boutons {
     display: flex;
@@ -334,7 +369,15 @@ span .h3,
     justify-content: center;
     // width: 30%;
     height: 600px;
+
+    @media screen and (max-width: 520px) {
+        width: 100%;
+        align-items: center;
+    }
+
+
 }
+
 
 .mes-boutons a {
     // width: 30%;
@@ -371,7 +414,14 @@ span .h3,
     $field-font-size: 15px;
     text-align: start;
     height: 70%;
+
+    @media screen and (max-width: 520px) {
+        width: 100%;
+    }
+
+
 }
+
 
 .wrapper .bloc {
     display: none;

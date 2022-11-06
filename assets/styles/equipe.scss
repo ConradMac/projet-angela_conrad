@@ -41,14 +41,36 @@
         display: flex;
         justify-content: space-evenly;
 
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            outline-width: 1;
+            line-height: 1;
+
+        }
+
         &.block-equipe-reverse {
             flex-direction: row-reverse;
             margin-bottom: 5%;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                outline-width: 1;
+                line-height: 1;
+            }
+
         }
 
         .leader {
             width: 100%;
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+
+            @media screen and (max-width:850px) {
+                height: 500px;
+            }
 
             @media (min-width: 32em) {
                 max-width: 300px;
@@ -130,6 +152,10 @@
             .paragraphe-bio {
                 line-height: 4;
                 font-weight: bold;
+
+                @media screen and (max-width:520px) {
+                    line-height: 2;
+                }
             }
         }
     }
