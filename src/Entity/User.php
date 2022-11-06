@@ -7,10 +7,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity(fields: ['lastname'], message: 'There is already an account with this lastname')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -45,10 +47,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 15)]
     private ?string $phone = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $birthday = null;
 
-    #[ORM\Column]
+    #[ORM\Column (nullable: true)]
     private ?\DateTimeImmutable $modified_at = null;
 
     #[ORM\Column]
@@ -60,12 +62,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'users', targetEntity: Documents::class)]
     private Collection $documents;
 
-    #[ORM\Column(length: 30)]
+    #[ORM\Column(length: 30, nullable: true)]
     private ?string $current_status = null;
+
+    #[ORM\Column(type: 'boolean')]
+    private $isVerified = false;
+
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $country = null;
 
     public function __construct()
     {
         $this->documents = new ArrayCollection();
+        $this->created_at = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
@@ -284,6 +293,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCurrentStatus(string $current_status): self
     {
         $this->current_status = $current_status;
+
+        return $this;
+    }
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): self
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getCountry(): ?string
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?string $country): self
+    {
+        $this->country = $country;
 
         return $this;
     }

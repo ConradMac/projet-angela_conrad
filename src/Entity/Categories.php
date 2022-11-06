@@ -21,9 +21,9 @@ class Categories
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
-    #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'parent')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?self $categories = null;
+    // #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'parent')]
+    // #[ORM\JoinColumn(nullable: false)]
+    // private ?self $categories = null;
 
     #[ORM\OneToMany(mappedBy: 'categories', targetEntity: self::class)]
     private Collection $parent;
@@ -31,9 +31,13 @@ class Categories
     #[ORM\Column(length: 255)]
     private ?string $images = null;
 
+    #[ORM\OneToMany(mappedBy: 'categories', targetEntity: Services::class)]
+    private Collection $services;
+
     public function __construct()
     {
         $this->parent = new ArrayCollection();
+        $this->services = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -65,17 +69,17 @@ class Categories
         return $this;
     }
 
-    public function getCategories(): ?self
-    {
-        return $this->categories;
-    }
+    // public function getCategories(): ?self
+    // {
+    //     return $this->categories;
+    // }
 
-    public function setCategories(?self $categories): self
-    {
-        $this->categories = $categories;
+    // public function setCategories(?self $categories): self
+    // {
+    //     $this->categories = $categories;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     /**
      * @return Collection<int, self>
@@ -85,27 +89,27 @@ class Categories
         return $this->parent;
     }
 
-    public function addParent(self $parent): self
-    {
-        if (!$this->parent->contains($parent)) {
-            $this->parent->add($parent);
-            $parent->setCategories($this);
-        }
+    // public function addParent(self $parent): self
+    // {
+    //     if (!$this->parent->contains($parent)) {
+    //         $this->parent->add($parent);
+    //         $parent->setCategories($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeParent(self $parent): self
-    {
-        if ($this->parent->removeElement($parent)) {
-            // set the owning side to null (unless already changed)
-            if ($parent->getCategories() === $this) {
-                $parent->setCategories(null);
-            }
-        }
+    // public function removeParent(self $parent): self
+    // {
+    //     if ($this->parent->removeElement($parent)) {
+    //         // set the owning side to null (unless already changed)
+    //         if ($parent->getCategories() === $this) {
+    //             $parent->setCategories(null);
+    //         }
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getImages(): ?string
     {
@@ -117,5 +121,39 @@ class Categories
         $this->images = $images;
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, Services>
+     */
+    public function getServices(): Collection
+    {
+        return $this->services;
+    }
+
+    public function addService(Services $service): self
+    {
+        if (!$this->services->contains($service)) {
+            $this->services->add($service);
+            $service->setCategories($this);
+        }
+
+        return $this;
+    }
+
+    public function removeService(Services $service): self
+    {
+        if ($this->services->removeElement($service)) {
+            // set the owning side to null (unless already changed)
+            if ($service->getCategories() === $this) {
+                $service->setCategories(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString()
+    {
+        return $this->name;
     }
 }

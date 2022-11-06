@@ -1,6 +1,9 @@
 twig:
-    default_path: '%kernel.project_dir%/templates'
+    default_path: "%kernel.project_dir%/templates"
 
 when@test:
     twig:
         strict_variables: true
+        # ajout pour captcha xD enfin
+        globals:
+            gg_recaptcha_site_key: "%env(GOOGLE_RECAPTCHA_SITE_KEY)%"

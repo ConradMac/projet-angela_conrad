@@ -1,0 +1,234 @@
+#global-test {
+    background-image: url("../../public/images_index/shutterstock.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    // overflow-x: hidden;
+    height: 80vh;
+    z-index: 0;
+    background-position: bottom;
+}
+
+#global-test:before {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 80vh;
+    position: absolute;
+    background-color: #00000095;
+    z-index: -5;
+}
+
+.logo,
+.l1,
+.l2,
+.logo-medias {
+    display: none;
+}
+
+// .container-first {
+//     height: 100vh !important;
+// }
+
+.container-first h1 {
+
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    // font-size: 50px;
+    color: #f1f1f1;
+    font-family: 'raleway', sans-serif;
+}
+
+h1 span {
+    position: relative;
+}
+
+.container-btns {
+
+    top: 50px;
+    margin-left: 10%;
+}
+
+.btn-first {
+    border: 2px solid #171212;
+    outline: none;
+    color: white;
+
+    font-size: 20px;
+    padding: 18px;
+    width: 20%;
+
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 2%;
+}
+
+.btn-first .b1 {
+    opacity: 1;
+    z-index: 1000000;
+}
+
+.btn-first:nth-child(1) {
+    margin-right: 30px;
+}
+
+.btn-first:hover {
+    transition: all 0.3s ease-in-out;
+    background: #4F4C47;
+    color: black;
+}
+
+.lignes {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.l1 {
+    width: 250px;
+    height: 3px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.l2 {
+    width: 140px;
+    height: 3px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+}
+
+.logo {
+    position: absolute;
+    right: 2.9%;
+    top: 9%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.medias {
+    list-style-type: none;
+    position: absolute;
+    right: 3.3%;
+    top: 60%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bulle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+    cursor: pointer;
+    position: relative;
+    right: 0px;
+    background-color: white;
+}
+
+.logo-medias {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+[data-ca3_icon]::before {
+    font-weight: normal;
+    content: attr(data-ca3_icon);
+}
+
+.ca3-scroll-down-arrow {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ca3-scroll-down-link {
+    cursor: pointer;
+    height: 60px;
+    width: 80px;
+    margin: 0px 0 0 -40px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    color: #FFF;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+
+    -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
+    -moz-animation: ca3_fade_move_down 2s ease-in-out infinite;
+    animation: ca3_fade_move_down 2s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes ca3_fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -20px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes ca3_fade_move_down {
+    0% {
+        -moz-transform: translate(0, -20px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes ca3_fade_move_down {
+    0% {
+        transform: translate(0, -20px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,99 @@
+// Typo
+
+// $rallway: 'Raleway',
+// sans-serif;
+// $font-family: $rallway;
+
+// $font-size: 16px;
+// $font-line-height: #{$font-size * 1.4};
+// $field-font-size: 15px;
+// $field-font-line-height: #{$font-size * 1.05};
+// $small-font-size: 14px;
+// $small-font-line-height: #{$font-size * 1.1};
+// $very-small-font-size: 12px;
+// $very-small-font-line-height: #{$font-size * 1.05};
+
+// // Couleurs
+// $white: #ffffff;
+// $grey-6: #f5f7fa;
+// $grey-5: #e5e5e5;
+// $grey-4: #dedede;
+// $grey-3: #bfbfbf;
+// $grey-2: #a0a0a0;
+// $grey-1: #74777b;
+// $very-light-grey: $grey-6; // Ex : background-color
+// $light-grey: $grey-3;
+// $black-default: #0f2322;
+// $blue-green: #00aca5;
+// $purple: #6b51ea; // yolab
+// $pink: #d7209e; // yolab secondary
+// $yorange: #f3a900;
+// $red: #c10000;
+// $orange: #f88e0b;
+// $green: #25c666;
+// $blue: #3c9cff;
+
+
+// // Commons colors (à utiliser sans modération)
+// // --------------
+// $primary-color: $blue;
+// $on-primary-color: $white;
+// $primary-very-light: #ebf5ff;
+// $secondary-color: $yorange;
+// $tertiary-color: $blue-green;
+// $on-secondary-color: $black-default;
+// $success-color: $green;
+// $error-color: $red;
+// $link-color: $blue-green;
+// $main-background: $very-light-grey;
+// $yolab: $purple;
+// $yolab-secondary: $pink;
+// $yolab-light: #efeeff;
+// $yolab-2: #e8e5ff; // less light
+// $yolab-3: #CDC9EF;
+
+// // usage scss : @each $name, $color in $colorsarray {}
+// $colorsarray: ("primary": $primary-color,
+//     "secondary": $secondary-color,
+//     "white": $white,
+//     "very-light-grey": $very-light-grey,
+//     "light-grey": $light-grey,
+//     "grey": $grey-1,
+//     "black-default": $black-default,
+//     "blue-green": $blue-green,
+//     "green-hercule": $blue-green,
+//     "pink": $pink,
+//     "purple": $purple,
+//     "yolab": $yolab,
+//     "yolab-light": $yolab-light,
+//     "yolab-secondary": $yolab-secondary,
+//     "red": $red,
+//     "orange": $orange,
+//     "green": $green,
+//     "blue": $blue,
+//     "danger": $red,
+//     "warning": $orange,
+//     "info": $purple,
+//     "success": $green,
+// );
+
+// // Layout
+// // ------
+
+// $layout-grid-max-width: 1280px;
+
+// $layout-grid-breakpoints: (desktop: 1000px,
+//     // Material default = 840px
+//     tablet: 600px,
+//     phone: 0px,
+// );
+
+// $layout-grid-default-gutter: (desktop: 24px,
+//     tablet: 16px,
+//     phone: 16px,
+// );
+
+// $layout-grid-default-margin: (desktop: 24px,
+//     tablet: 16px,
+//     phone: 16px,
+// );

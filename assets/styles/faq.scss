@@ -1,0 +1,98 @@
+.faq-titre-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+
+
+    .titre-faq {
+        color: black;
+        text-decoration: underline;
+
+    }
+
+    .paragraphe-faq {
+        color: black;
+        width: 50%;
+        margin-top: 2%;
+        font-weight: bold;
+        line-height: 2;
+    }
+}
+
+.accordion {
+    // accordeons class classique 
+    // background-color: aliceblue;
+    font-size: 20px;
+    // width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    align-items: center;
+
+    .box {
+        text-align: center;
+        width: 80%;
+    }
+
+    // box.active rep
+    .box.active .content {
+        height: 100px;
+        padding: 10px;
+
+        .box:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+    .box.active .label::before {
+        content: '-'; // represente le moins lors du click. (ouverture onglet)
+    }
+
+    .label {
+        background-color: #222831;
+        color: #fff;
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        border-radius: 25px;
+        font-size: 23px;
+
+
+    }
+
+    .label::before {
+        content: '+'; // reprensente le + lorsque l'onglet n'est pas encore clické.
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+
+
+    }
+
+    .content {
+        font-size: 17px;
+        background-color: #EEEEEE;
+        overflow: hidden; // permet de cacher le contenu de l'onglet
+        // overflow-y: auto; // permet de faire defiler le contenu de l'onglet. A voir ave cnuno si on garde ou pas.
+        height: 0;
+        position: relative;
+        transition: all 1s ease; // permet de faire une animation lors de l'ouverture de l'onglet en 1 seconde
+        border-radius: 15px;
+        font-weight: bold;
+
+        .content::-webkit-scrollbar {
+            // permet de cacher la barre de defilement, à utiliser avec parsimony
+            display: none;
+        }
+    }
+}

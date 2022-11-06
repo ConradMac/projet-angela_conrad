@@ -1,0 +1,197 @@
+// // ---- newsletter site titre ----
+// <!-- START - We recommend to place the below code in head tag of your website html  -->
+
+@font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+}
+
+#sib-container input:-ms-input-placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+}
+
+#sib-container input::placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+}
+
+#sib-container textarea::placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+}
+
+
+// #newsletter {
+//     /* min-height: 70vh; */
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// #newsletter .ul_cached form div:nth-child(2) ul {
+//     display: none;
+// }
+
+// #newsletter form ul li {
+//     color: tomato;
+//     font-size: 12px;
+// }
+
+// form {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+//     .welcome {
+//         background-color: #fff;
+//         width: 100%;
+//         padding: 5%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//         .welcome h2 {
+//             font-size: 2.5em;
+//             font-weight: bold;
+//             text-transform: uppercase;
+//             margin-bottom: 30px;
+//         }
+
+//         .welcome p {
+//             text-transform: capitalize;
+//             font-size: 1em;
+//             color: rgba(51, 51, 51, .7);
+//             margin-bottom: 30px;
+//         }
+//     }
+
+//     .welcome form {
+//         background-color: #333;
+//         display: flex;
+//         width: 50%;
+//         text-align: center;
+//         justify-content: center;
+//         display: flex;
+//         /*justify-content: center;
+//     */
+//         border-radius: 20px;
+//         -webkit-border-radius: 20px;
+//         -moz-border-radius: 20px;
+//         -ms-border-radius: 20px;
+//         -o-border-radius: 20px;
+
+//         input {
+//             border: none;
+//             outline: none;
+//             background-color: transparent;
+//             padding: 15px 20px;
+//             color: #fff;
+//             /* flex: 1; */
+//         }
+//     }
+
+//     form input[type='email'] {
+//         flex: 1;
+//         font-size: 1.3em;
+
+//     }
+
+//     form input[type='submit'] {
+//         /* background-color: #fff; */
+//         color: #fff;
+//         border-left: 2px solid #f1f1f1;
+//         cursor: pointer;
+//         text-transform: uppercase;
+//         font-size: 1.3em;
+//         font-weight: bold;
+//     }
+
+//     form input[type='submit']:hover {
+//         opacity: .7;
+//     }
+// }
+
+// @media screen and (max-width: 1079px) {
+//     #newletter {
+//         flex-direction: column;
+//     }
+
+//     .welcome {
+//         padding: 50px 20%;
+//         width: 100%;
+//         /* margin: 0 auto; */
+//     }
+// }
+
+// @media screen and (max-width: 775px) {
+//     form input[type='email'] {
+//         font-size: 1em;
+//     }
+// }
+
+// @media screen and (max-width: 600px) {
+//     .welcome {
+//         width: 100%;
+//         padding: 80px 30px;
+//     }
+
+//     .welcome form {
+//         background-color: transparent;
+//         display: flex;
+//         flex-wrap: wrap;
+//         flex-direction: column;
+//         border-radius: 0;
+//         -webkit-border-radius: 0px;
+//         -moz-border-radius: 0px;
+//         -ms-border-radius: 0px;
+//         -o-border-radius: 0px;
+//     }
+
+//     form input[type='email'] {
+//         font-size: 1em;
+//         border-bottom: 1px solid #333;
+//         color: #333;
+//     }
+
+//     ::placeholder {
+//         font-size: large;
+//         color: #333;
+//         opacity: .5;
+//     }
+
+//     form input[type='submit'] {
+//         color: #fff;
+//         border-left: none;
+//         background-color: #333;
+//         width: 100px;
+//         margin: 20px auto;
+//         font-size: 1em;
+//     }
+// }
+
+// @media screen and (max-width: 500px) {
+//     .welcome {
+//         padding: 80px 20px;
+//     }
+// }

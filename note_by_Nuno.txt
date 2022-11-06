@@ -1,0 +1,1 @@
+Note de teacher Nuno, si dossier copier coller de git, importer les "devDependencies" et les ""dependencies" !!!!! télécharger les même versions ou versions compatibles. Fichier de packaage.json.

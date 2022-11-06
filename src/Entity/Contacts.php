@@ -29,6 +29,9 @@ class Contacts
     #[ORM\Column(type: Types::TEXT)]
     private ?string $message = null;
 
+    #[ORM\Column(length: 100)]
+    private ?string $lastname = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Contacts
     public function setMessage(string $message): self
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
 
         return $this;
     }

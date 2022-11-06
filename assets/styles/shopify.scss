@@ -1,0 +1,207 @@
+.block_image_dashboard {
+    box-shadow: 1vmin 1vmin 3vmin white;
+    margin-top: 5%;
+    border-radius: 15px;
+    display: flex;
+    margin-bottom: 5%;
+    align-items: center;
+
+
+
+
+    @media screen and (max-width: 1000px) {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+}
+
+.contenu-para-shopify {
+    width: 100%;
+    line-height: 2em;
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.block_shopify_proposition {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+
+
+
+.main-block-services {
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    height: auto;
+    color: black;
+    font-family: 'raleway', sans-serif;
+    margin-top: 7%;
+
+    .block-page-shopify {
+        margin-top: 4%;
+    }
+
+}
+
+.text-shopify-area {
+    padding: 4%;
+    width: 50%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100% !important;
+    }
+
+}
+
+
+
+.images-shopify {
+    border-radius: 16px;
+}
+
+.container {
+    margin-top: 15%;
+}
+
+
+// price agency
+
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+
+    .block_all_price {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4%;
+        padding: 12% 0;
+
+
+
+        .card {
+            padding: 15%;
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            // ajouter autre photo avec un blur, savoir comment faire. 
+            background: url("../../public/images_outils_seo/fond-gris-peint.png");
+
+            .card_title {
+                font-weight: normal;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+
+
+            .pricing {
+                font-weight: normal;
+                font-size: 30px;
+
+                .pricing .small {
+                    font-size: 16px;
+                }
+            }
+
+            .features {
+                margin: 40px 0;
+                list-style-position: inside;
+
+                .features li {
+                    padding-bottom: 10px;
+                }
+            }
+
+            a.cta_btn {
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+                background: rgba(21, 23, 24, 0.7);
+                border-radius: 29px;
+                padding: 20px 0;
+                color: white;
+                text-decoration: none;
+                letter-spacing: 2px;
+                transition: background .3s ease;
+            }
+
+            a.cta_btn:hover {
+                background: #000;
+            }
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 3px 15px #00000050;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.1);
+            transition: all 200ms ease-in;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .block_all_price {
+        grid-template-columns: 1fr 1fr;
+        gap: 2%;
+
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .block_all_price {
+        grid-template-columns: 1fr;
+        gap: 2%;
+        padding-bottom: 25%;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+
+    .card {
+        padding: 30px;
+    }
+
+    .card_title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .pricing {
+        font-size: 52px;
+    }
+
+    a.cta_btn {
+        font-size: 11px;
+    }
+}

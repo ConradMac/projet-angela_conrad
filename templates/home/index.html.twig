@@ -5,5 +5,381 @@
 {% endblock %}
 
 {% block body %}
+  <div class="present_agency">
+    <div class="text-seo">
+      <h1>
+        Nous et Vous
+      </h1>
 
+      <p class="presentation_seo">
+        Notre agence web est spécialisée dans la création de site web et leur
+        référencement. notre expertise s’adressent particulièrement aux
+        artisans, associations, fédérations, auto-entrepreneurs ainsi qu’aux PME
+        qui souhaitent devenir présents sur le web.
+      </p>
+      <p>
+        Notre objectif est de vous créer un site web simple, moderne et de
+        qualité tout en proposant des prix accessibles. Nous fxons ensemble le
+        contenu, la mise en page et le style de votre site afn qu’ils soient
+        adaptés à l’image de votre société et à votre activité.
+      </p>
+      <p>
+        En fonction de vos besoins et de votre budget, nous mettons en place une
+        stratégie digitale gagnante pour générer du trafic et des ventes.
+      </p>
+    </div>
+    <div class="img">
+      <img src="{{ asset('images/digital-marketing-g81424b8b1_1280.jpg') }}"
+        alt="image_agence" />
+    </div>
+  </div>
+
+  {# ici j'ai mis un div pour faire un flip flop afin qu'il soit rectifier avec un flex sinon cela etait dans le footer. #}
+  <div class="flip-flop-area">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <!-- front content -->
+          <img src="{{ asset('images_index/téléchargement.jpg') }}"
+            alt="image_seo" />
+          <div class="block-content">
+            <h3>
+              31 Oct 2022
+            </h3>
+            <h2>
+              SEO
+            </h2>
+            <div class="tag">
+              Référencement Naturel
+            </div>
+            <div class="tag">
+              Stratégie Digital &amp; SERP
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <!-- back content -->
+          <h3>
+            En bref
+          </h3>
+          <p>
+            Nous optimisons votre site pour les moteurs de recherche. Nous
+            définirons avec vous l'ensemble des techniques à mettre en place
+            pour améliorer votre visibilité sur le navigateur.
+          </p>
+          <a class="button" href="{{ path('app_seo') }}">
+            Renseignez-vous ici !
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <!-- front content -->
+          <img src="{{ asset('images_index/Mon_proje _(4).jpg') }}"
+            alt="image_dev" />
+          <div class="block-content">
+            <h3>
+              31 Oct 2022
+            </h3>
+            <h2>
+              Création de site internet
+            </h2>
+            <div class="tag">
+              Site vitrine
+            </div>
+            <div class="tag">
+              e-commerce
+              {# &amp; Shopify #}
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <!-- back content -->
+          <h3>
+            En bref
+          </h3>
+          <p>
+            Le site e-commerce ou « site marchand » ou encore « boutique en
+            ligne » est un site web qui permet aux internautes de pouvoir
+            acheter des produits directement en ligne....
+          </p>
+          <a class="button" href="#">Renseignez-vous ici !</a>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <!-- front content -->
+          <img src="{{ asset('images_index/wordpress.jpg') }}"
+            alt="image_wordpress" />
+          <div class="block-content">
+            <h3>
+              31 Oct 2022
+            </h3>
+            <h2>
+              WordPress
+            </h2>
+            <div class="tag">
+              WooCommerce
+            </div>
+            <div class="tag">
+              formation WordPress/ E-commerce
+              {# &amp; Site E-commerce #}
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <!-- back content -->
+          <h3>
+            En bref
+          </h3>
+          <p>
+            Bien plus qu’une agence spécialisée WordPress, nous créons des sites
+            vitrines et e-commerce qui vous ressemblent et vous donnent la
+            visibilité que vous méritez.
+          </p>
+          <a class="button" href="#">Renseignez-vous ici !</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <svg version="1.1"
+      id="cadres"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="1500px"
+      height="700px"
+      viewBox="0 0 400 400"
+      enable-background="new 0 0 400 400"
+      xml:space="preserve">
+      <rect id="cadre1"
+        x="82.083"
+        y="81.528"
+        fill="none"
+        stroke="#000000"
+        stroke-width="3"
+        width="540"
+        height="306" />
+
+      <rect id="cadre2"
+        x="61.083"
+        y="60.528"
+        fill="none"
+        stroke="#000000"
+        stroke-width="3"
+        width="518"
+        height="338" />
+    </svg>
+  </div>
+  <div class="cadre-team">
+    <div class="cadre-team-style">
+      <h2>
+        L'équipe
+      </h2>
+      <p>
+        Notre équipe est composée de 2 personnes, nous sommes tous passionnés
+        par le web et le développement. Nous sommes à votre écoute pour vous
+        conseiller et vous accompagner dans la création de votre site web.
+      </p>
+      <div class="picture-team">
+        <div class="picture">
+          <img class="images-team"
+            src="{{ asset('/images_teams/AngelaKunder.jpg') }}"
+            alt="image_team" />
+          <div class="text">
+            <h3>
+              Angela
+            </h3>
+            <p>
+              Développeuse web et Marketeur
+            </p>
+          </div>
+        </div>
+        <div class="picture">
+          <img class="images-team"
+            src="{{ asset('images_index/photo_de_conrad.jpg') }}"
+            alt="image_team" />
+          <div class="text">
+            <h3>
+              Conrad de la Vilardière
+            </h3>
+            <p>
+              Développeur web
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-title">
+    <div class="h2-title">
+      <h2>
+        Et vous, <span class="qui_est_vous">qui êtes vous ?</span>
+      </h2>
+    </div>
+    <div class="four-cadres">
+      <div class="cadre">
+        <img class="images-team"
+          src="{{ asset('images_index/icône-gestion-de-projet.jpg') }}"
+          alt="image_team" />
+        <h3>
+          Je suis porteur de projets
+        </h3>
+      </div>
+
+      <div class="cadre">
+        <img class="images-team"
+          src="{{ asset('images_index/accelaration_projet.png') }}"
+          alt="image_team" />
+        <h3>
+          J'ai une start-up en phase d'accélération
+        </h3>
+      </div>
+
+      <div class="cadre">
+        <img class="images-team"
+          src="{{ asset('images_index/productivite_index.png') }}"
+          alt="image_team" />
+        <h3>
+          Mon entreprise cherche à gagner en productivité
+        </h3>
+      </div>
+
+      <div class="cadre">
+        <img class="images-team"
+          src="{{ asset('images_index/relais_de_croissance.png') }}"
+          alt="image_team" />
+        <h3>
+          Je cherche des relais de croissance
+        </h3>
+      </div>
+    </div>
+  </div>
+  {# <div class="text-mission">
+    <div class="our-mission">
+      <h3 class="text-area-subtitle text-area-style">
+        Notre mission
+      </h3>
+      <h4 class="text-area-subtitle text-area-style">
+        Créer un maximum de valeurs en un minimum de temps.
+      </h4>
+      <img class="images"
+        src="{{ asset('images_index/valeur.jpg') }}"
+        alt="image_team" />
+    </div>
+    <div class="our-mission">
+      <h4 class="text-area-subtitle">
+        Nous accompagnons les entrepreneurs et décideurs à innover et réussir
+        leurs produits en ayant un impact fort sur leurs utilisateurs. Chaque
+        collaboration est basée sur la nécessité de résoudre des problèmes
+        métiers, et de créer de la valeur pour votre activité.
+      </h4>
+      <h4 class="text-area-subtitle">
+        Cette démarche à impact est au centre de notre proposition de valeurs.
+        Nous metons nos connaissances en matiere de SEO et de technique de
+        developpement pour vous accompagner durant votre projet et même au dela.
+      </h4>
+      <img class="images"
+        src="{{ asset('images_index/valeur.jpg') }}"
+        alt="image_team" />
+    </div>
+  </div> #}
+  <div class="wrapper">
+    <div class="nos-offres">
+      <div class="subtitle_offer_index">
+        <h2>
+          Nos offres
+        </h2>
+        <h2>
+          Nous vous accompagnons à chaque étape pour transformer vos idéees en
+          réussites business
+        </h2>
+      </div>
+
+      <div class="wrapper-area-offres">
+        <div class="mes-boutons">
+          <a href="#tab1">Je suis porteur de projet</a>
+          <a href="#tab2">J'ai une start-up en phase d'accélération</a>
+          <a href="#tab3">Je cherche à gagner en productivité</a>
+          <a href="#tab4">Je cherche des relais de croissance</a>
+        </div>
+        <div class="text-block-area">
+          <span id="tab1" class="ancre"></span>
+          <div class="rouge bloc">
+            <p>
+              Vous souhaitez valider une idée pour répondre à un problème que
+              rencontre votre cible marché ?
+            </p>
+            <p>
+              Vous avez validé votre proposition de valeur auprès de vos
+              utilisateurs et vous souhaitez réaliser votre preuve de concept ?
+            </p>
+            <p>
+              Quelque soit votre stade d’avancement, nous vous accompagnons à
+              lancer un produit pertinent en un minimum de temps.
+            </p>
+            <p>
+              Allez plus loin :
+            </p>
+          </div>
+          <span id="tab2" class="ancre"></span>
+          <div class="jaune bloc">
+            <p>
+              Vous avez une vision et des objectifs business ambitieux ? Nous
+              vous aidons à fixer un cap et à définir un chemin critique.
+            </p>
+            <p>
+              Pourquoi, quoi et comment ? Les 3 questions clés du succès
+              auxquelles notre équipe business, produit et tech vous aident à
+              apporter une réponse en un temps record.
+            </p>
+            <p>
+              Nous mettons nos expertises en product management et développement
+              web & mobile au service de votre croissance.
+            </p>
+          </div>
+          <span id="tab3" class="ancre"></span>
+          <div class="violet bloc">
+            <p>
+              Vous souhaitez gagner en productivité grâce au numérique ?
+            </p>
+            <p>
+              Nous vous aidons à vous concentrer sur la création de valeur de
+              votre entreprise en automatisant les actions qui peuvent l’être.
+            </p>
+            <p>
+              Notre souhait : rendre l’expérience de travail de vos équipe plus
+              fluide et plus agréable, pour qu’elles se concentrent sur les
+              actions à forte valeur ajoutée.
+            </p>
+          </div>
+          <span id="tab4" class="ancre"></span>
+          <div class="black bloc">
+            <p>
+              Vous cherchez des relais de croissance ?
+            </p>
+            <p>
+              Vous cherchez à créer une nouvelle source de revenu ? Vous
+              souhaitez valider une idée pour répondre à une problématique que
+              rencontre votre cible marché ?
+            </p>
+            <p>
+              Vous avez validé votre proposition de valeur auprès de vos
+              utilisateurs et vous souhaitez réaliser votre preuve de concept ?
+            </p>
+            <p>
+              Quelque soit votre stade d’avancement, nous vous accompagnons à
+              lancer un produit pertinent en un minimum de temps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

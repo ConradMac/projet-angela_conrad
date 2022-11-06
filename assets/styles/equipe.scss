@@ -1,0 +1,162 @@
+:root {
+    // --background: #ffc0cb;
+    --titre-equipe: #ffc0cb;
+    --header-bkg: #3b3b98;
+    // --bio-bkg-hover: #DAA520; // validé car utilisé dans le hover
+    --leader__name: #DAA520; // validé car utilisé
+    --page-title: #800000;
+}
+
+.team-block {
+
+    .titre-equipe {
+        margin-top: 5%;
+
+        .page-title {
+            color: var(--page-title);
+            font-size: 3rem;
+            margin-bottom: 5rem;
+            margin-top: 0;
+            // font-family: "Dancing Script", cursive;
+        }
+    }
+}
+
+.leadership {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 5%;
+
+    @media (min-width: 32em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 50em) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .block-equipe {
+        display: flex;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            outline-width: 1;
+            line-height: 1;
+
+        }
+
+        &.block-equipe-reverse {
+            flex-direction: row-reverse;
+            margin-bottom: 5%;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                outline-width: 1;
+                line-height: 1;
+            }
+
+        }
+
+        .leader {
+            width: 100%;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+
+            @media screen and (max-width:850px) {
+                height: 500px;
+            }
+
+            @media (min-width: 32em) {
+                max-width: 300px;
+            }
+
+            &:hover {
+                cursor: pointer; // cela permet de changer la forme de la div (ici en locurence) quand on passe sur l'élément avec la souris
+
+
+                .leader__img {
+                    .images-team {
+                        transform: scale(140%); // permet de zoomer l'image
+                        filter: saturate(100%); // permet de saturer l'image
+                    }
+
+                }
+
+                .leader__name {
+                    // color: #DAA520;
+                    color: var(--leader__name);
+                }
+            }
+
+            &__img {
+                overflow: hidden;
+                width: 100%;
+                height: 300px;
+                position: relative;
+
+                .images-team {
+                    position: absolute;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    width: 100%;
+                    filter: saturate(0%);
+                    transform: scale(130%);
+                    transition: 0.2s all ease-in-out;
+                }
+            }
+
+            &__name {
+                text-align: center;
+                padding: 1.5rem;
+                font-size: 2rem;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transition: 0.2s all ease-in-out;
+                color: var(--name-text);
+
+                @media (min-width: 32em) {
+                    font-size: 1.5rem;
+                }
+
+                @media (min-width: 50em) {
+                    font-size: 1rem;
+                }
+
+                .leader__name h2 {
+                    font-size: 1.5rem;
+
+                    @media (min-width: 32em) {
+                        font-size: 2rem;
+                    }
+
+                    @media (min-width: 50em) {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .text-bio {
+            width: 50%;
+
+            .paragraphe-bio {
+                line-height: 4;
+                font-weight: bold;
+
+                @media screen and (max-width:520px) {
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
