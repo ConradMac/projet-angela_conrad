@@ -12,7 +12,8 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[UniqueEntity(fields: ['lastname'], message: 'There is already an account with this lastname')]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+// mettre email car on veut que l'email soit unique lors de l'inscription
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]

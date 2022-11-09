@@ -17,10 +17,10 @@ class Documents
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $sending_date = null;
+    private ?\DateTime $sending_date = null;
 
     #[ORM\ManyToOne(inversedBy: 'documents')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: true)]
     private ?User $users = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -48,12 +48,12 @@ class Documents
         return $this->id;
     }
 
-    public function getSendingDate(): ?\DateTimeImmutable
+    public function getSendingDate(): ?\DateTime
     {
         return $this->sending_date;
     }
 
-    public function setSendingDate(\DateTimeImmutable $sending_date): self
+    public function setSendingDate(\DateTime $sending_date): self
     {
         $this->sending_date = $sending_date;
 
@@ -98,6 +98,7 @@ class Documents
 
     public function getSeo(): ?string
     {
+        
         return $this->seo;
     }
 

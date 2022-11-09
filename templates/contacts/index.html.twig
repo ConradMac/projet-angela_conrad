@@ -5,9 +5,9 @@
 {% block body %}
   {# {{ form(form) }}
   {% block body %} #}
-  <section class="container">
+  <section class="container col-8">
+
     <h1 class="mb-5 titre-contact">
-      Je me renseigne
     </h1>
       {% for success in app.flashes('success') %} 
         <div class="alert alert-success">
@@ -54,4 +54,3 @@
     </div>
   </section>
 {% endblock %}
-{# {% endblock %} #}

@@ -137,10 +137,10 @@ class RegistrationFormType extends AbstractType
                         'maxMessage' => 'Votre adresse ne peut pas faire plus de {{ limit }} caractères',
                     ]),
                     new Regex([
-                    'pattern' => '/^[0-9]{1,3} [a-zA-Z0-9 ]{1,30}$/'
+                    'pattern' => '/^[a-zA-Z0-9 ]{1,100}$/'
                         ,
                     'message' => 'Votre adresse ne peut contenir que des lettres',
-                    ]),
+                     ]),
                 ],
             ])
             ->add('zipcode', NumberType::class, [
@@ -246,7 +246,7 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                     new Regex([
-                        'pattern' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/'
+                        'pattern' => '/^[a-zA-Z0-9]+$/i'
                         ,
                        'message' => 'Votre mot de passe ne peut contenir que des lettres',
                      ]),

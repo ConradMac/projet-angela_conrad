@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Mon espace client
+{% endblock %}
+
+{% block body %}
+  {# <h1>Mon compte</h1> #}
+
+  <div id="profil">
+    <ul class="informations_client">
+      <li><b>Email :</b><br />{{ app.user.email }}</li>
+
+      <li>
+        <b>Nom et prénom :</b><br />{{ app.user.lastname }}
+        {{ app.user.firstname }}
+      </li>
+
+      <li>
+        <b>Adresse :</b><br />{{ app.user.address }} {{ app.user.zipcode }}
+        {{ app.user.city }} {{ app.user.country }}
+      </li>
+
+      <li><b>Numéro de téléphone :</b><br />{{ app.user.phone }}</li>
+    </ul>
+
+    {# bonjour utilisateur avec titre_seo #}
+
+    {# {{ titre_seo }} {{ app.user.firstname }} #}
+
+    <div class="titi">
+      {{ form_start(form) }}
+
+      {# {{ form_widget(Documents) }} #}
+
+      {{ form_row(form.seo) }}
+
+      {{ form_row(form.ui_ux) }}
+      {{ form_row(form.image_service) }}
+      {# {{ form_row(form.users) }} #}
+
+ 
+
+      {# {{ form_row(Documents.services) }} #}
+      {{ form_row(form.description) }}
+      {{ form_end(form) }}
+
+      {% if app.user %}
+        <div class="mb-3">
+          Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Se
+            déconnecter</a>
+        </div>
+
+        <div class="lien_connexion">
+          <p>
+            Vous souhaitez vous connecter avec un autre compte ? Cliquez <a href="{{
+              path(
+                'app_login'
+              )
+              }}">
+              ici
+            </a> pour vous connecter.
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -9,6 +9,7 @@
     justify-content: space-around;
     height: auto;
     align-items: center;
+    font-family: 'raleway', sans-serif;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -64,6 +65,7 @@ h3 {
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    font-family: 'raleway', sans-serif;
 }
 
 .flip-container,
@@ -214,6 +216,7 @@ span .h3,
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-top: 13%;
     margin-bottom: 15%;
+    font-family: 'raleway', sans-serif;
 
     .cadre-team-style {
         text-align: center;
@@ -256,6 +259,7 @@ span .h3,
     margin-left: 10%;
     border: 1px solid black;
     margin-bottom: 4%;
+    font-family: 'raleway', sans-serif;
 
     .h2-title {
         text-decoration: underline;
@@ -306,6 +310,7 @@ span .h3,
     background-color: lightblue;
     padding: 3%;
     justify-content: center;
+    font-family: 'raleway', sans-serif;
 
     .our-mission {
         width: 25%;
@@ -345,6 +350,7 @@ span .h3,
     align-items: center;
     text-align: center;
     justify-content: center;
+    font-family: 'raleway', sans-serif;
 }
 
 .wrapper-area-offres {
@@ -386,7 +392,7 @@ span .h3,
     text-align: center;
     margin: 0.5rem;
     padding: 0.5rem;
-    background-color: #15153C;
+    background-color: #C89592;
     border-radius: 15px;
     text-decoration: none;
     color: white;
@@ -409,7 +415,7 @@ span .h3,
 
 .text-block-area {
     width: 600px;
-    background-color: #800000;
+    background-color: #C89592;
     border-radius: 25px;
     $field-font-size: 15px;
     text-align: start;

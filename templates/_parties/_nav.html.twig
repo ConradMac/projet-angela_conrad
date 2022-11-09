@@ -1,6 +1,3 @@
-{% block stylesheets %}
-
-{% endblock %}
 <div class="top-nav contain-to-grid wrapper">
   <nav class="top-bar">
     <ul>
@@ -45,16 +42,18 @@
           </div>
         </a>
       </li>
-      <li id="smallTimer" class="small-text flip-flop show">
-        <a class="cube" href="{{ path('app_register') }}">
-          <div class="duration flippety media-screen">
-            Se connecter
-          </div>
-          <div class="flop media-screen">
-            <span class="description">Votre compte</span>
-          </div>
-        </a>
-      </li>
+      {% if is_granted('ROLE_USER') %}
+        <li id="smallTimer" class="small-text flip-flop show">
+          <a class="cube" href="{{ path('app_mon_compte') }}">
+            <div class="duration flippety media-screen">
+              Se connecter
+            </div>
+            <div class="flop media-screen">
+              <span class="description">Votre compte</span>
+            </div>
+          </a>
+        </li>
+      {% endif %}
     </ul>
   </nav>
 </div>

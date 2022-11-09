@@ -12,9 +12,13 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $titre_seo = "M.K Agency";
-        return $this->render('home/index.html.twig', compact("titre_seo")
+        return $this->render('home/index.html.twig', compact("titre_seo"), 
         // "titre_seo" => $titre_seo
         );
+        
+
+
+        
     }
 
     #[Route('/faq', name: 'app_faq')] // on retire Home pour que la page symfony 6.4.1 soit la page d'accueil
