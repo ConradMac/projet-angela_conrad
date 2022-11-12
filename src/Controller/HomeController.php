@@ -43,17 +43,12 @@ class HomeController extends AbstractController
     #[Route('/services', name: 'app_services')] // on retire Home pour que la page symfony 6.4.1 soit la page d'accueil
     public function services(): Response
     {
-        return $this->render('home/services.html.twig', []);
+        $titre_seo = 'Nos services';
+        return $this->render('home/services.html.twig', ['titre_seo' => $titre_seo,]);
+
     }
 
-    #[Route('/seo', name: 'app_seo')] // on retire Home pour que la page symfony 6.4.1 soit la page d'accueil
-    public function services_seo(): Response
-    {
-        $titre_seo = 'Nos prestations en SEO';
-        return $this->render('services/seo.html.twig', [
-            'titre_seo' => $titre_seo,
-        ]);
-    }
+    
 
     #[Route('/shopify', name: 'app_shopify')] // on retire Home pour que la page symfony 6.4.1 soit la page d'accueil
     public function services_shopify(): Response

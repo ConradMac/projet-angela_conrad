@@ -419,38 +419,41 @@
           composants pour créer des solutions qui combinent un back-end
           technique solide avec un design moderne facile à utiliser .
         </p>
+
         <div class="slider">
           <div class="slide-track">
-            <div class="slide">
-              <img src="{{ asset('images_outils_seo/googleanalytics.jpg') }}"
-                alt="image de l'outil google analytics" />
-            </div>
-            <div class="slide">
-              <img src="{{ asset('images_outils_seo/Logo_Ahrefs.png') }}"
-                alt="image de l'outil a ahref pour le référencement" />
-            </div>
-            <div class="slide">
-              <img src="{{
-                asset(
-                  'images_outils_seo/logo-screaming-frog.png'
-                )
-                }}"
-                alt="image de l'outil screaming frog" />
-            </div>
-            <div class="slide">
-              <img src="{{
-                asset(
-                  'images_outils_seo/google-pagespeed-insights.jpg'
-                )
-                }}"
-                alt="image de l'outil google" />
-            </div>
-            <div class="slide">
-              <div class="outil_referencement">
-                <img src="{{ asset('images_outils_seo/logo_ubersuggest.png') }}"
-                  alt="image de l'outil Ubersuggest" />
+            {% for picsSeoImages in picsSeo %}
+              <div class="slide">
+                <img class="images"
+                  src="{{ asset('picsSeo/' ~ picsSeoImages.link) }}"
+                  alt="image de l'icone du langage php" />
               </div>
+            {% endfor %}
+            {# <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/PHP-1.jpg') }}"
+                alt="image de l'icone du langage php" />
             </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/python-1.jpg') }}"
+                alt="image de l'icone du langage Python" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/react-1.jpg') }}"
+                alt="image de l'icone du langage Reactjs" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/symfony-1.jpg') }}"
+                alt="image de l'icone du langage Symfony" />
+            </div>
+            <div class="slide">
+              <img class="images"
+                src="{{ asset('/images_developpementWeb/angular-1.jpg') }}"
+                alt="image de l'icone du langage Angular" />
+            </div> #}
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use App\Entity\Contacts;
+use App\Entity\SeoIcons;
 use App\Entity\Services;
 use App\Entity\Documents;
 use App\Entity\Picskills;
@@ -27,7 +28,11 @@ class DashboardController extends AbstractDashboardController
         //
         // Decommenter cette ligne pour rediriger vers la page d'accueil de l'admin
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        return $this->redirect($adminUrlGenerator->setController(UserCrudController::class)->generateUrl());
+        return $this->redirect(
+            $adminUrlGenerator
+                ->setController(UserCrudController::class)
+                ->generateUrl()
+        );
 
         // Option 2. You can make your dashboard redirect to different pages depending on the user
         //
@@ -43,19 +48,30 @@ class DashboardController extends AbstractDashboardController
 
     public function configureDashboard(): Dashboard
     {
-        return Dashboard::new()
-            ->setTitle('Projet Angela Conrad'); // titre de admin
+        return Dashboard::new()->setTitle('Projet Angela Conrad'); // titre de admin
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Accueil', 'fa fa-home');
         yield MenuItem::linkToCrud('Utilisateur', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('Categories', 'fas fa-list', Categories::class);
+        yield MenuItem::linkToCrud(
+            'Categories',
+            'fas fa-list',
+            Categories::class
+        );
         yield MenuItem::linkToCrud('Services', 'fas fa-list', Services::class);
-        yield MenuItem::linkToCrud('Documents', 'fas fa-file', Documents::class);
+        yield MenuItem::linkToCrud(
+            'Documents',
+            'fas fa-file',
+            Documents::class
+        );
         yield MenuItem::linkToCrud('Contacts', 'fas fa-list', Contacts::class);
-        yield MenuItem::linkToCrud('Picskills', 'fas fa-list', Picskills::class);
-
+        yield MenuItem::linkToCrud(
+            'Picskills',
+            'fas fa-list',
+            Picskills::class
+        );
+        yield MenuItem::linkToCrud('seoIcons', 'fas fa-list', SeoIcons::class);
     }
 }
