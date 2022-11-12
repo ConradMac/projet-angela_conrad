@@ -146,11 +146,15 @@
         <div class="grid block_all_price">
           <div class="card">
             <h2 class="card_title">
-              Le basic
+              Shopify Basic
             </h2>
-            <p class="pricing">
-              750€<span class="small">/offre</span>
-            </p>
+            {% for prixBasics in prixBasic %}
+              <p class="pricing">
+                {{ prixBasics.price / (1|number_format(2, '', ',')) }} € <span class="small">
+                  /offre
+                </span>
+              </p>
+            {% endfor %}
             <p>
               mensualité 250 €
             </p>
@@ -167,14 +171,16 @@
           </div>
           <div class="card">
             <h2 class="card_title">
-              Le shopify
+              Shopify Premium
             </h2>
-            <p class="pricing">
-              1200€<span class="small">/offre</span>
-            </p>
-            <p>
-              mensualité 300 €
-            </p>
+
+            {% for prixPremiums in prixPremium %}
+              <p class="pricing">
+                {{ prixPremiums.price / (1|number_format(2, '', ',')) }} € <span class="small">
+                  /offre
+                </span>
+              </p>
+            {% endfor %}
 
             <ul class="features">
               <li>Boutique en ligne</li>
@@ -188,11 +194,15 @@
           </div>
           <div class="card">
             <h2 class="card_title">
-              advanced
+              Shopify Advanced
             </h2>
-            <p class="pricing">
-              2000€<span class="small">/offre</span>
-            </p>
+            {% for prixAdvanceds in prixAdvanced %}
+              <p class="pricing">
+                {{ prixAdvanceds.price / (1|number_format(2, '', ',')) }} € <span class="small">
+                  /offre
+                </span>
+              </p>
+            {% endfor %}
             <p>
               mensualité 500 €
             </p>

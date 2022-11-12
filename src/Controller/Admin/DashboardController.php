@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Entity\Contacts;
 use App\Entity\Services;
 use App\Entity\Documents;
+use App\Entity\Picskills;
 use App\Entity\Categories;
 use App\Controller\Admin\UserCrudController;
 use Symfony\Component\HttpFoundation\Response;
@@ -54,6 +55,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Services', 'fas fa-list', Services::class);
         yield MenuItem::linkToCrud('Documents', 'fas fa-file', Documents::class);
         yield MenuItem::linkToCrud('Contacts', 'fas fa-list', Contacts::class);
+        yield MenuItem::linkToCrud('Picskills', 'fas fa-list', Picskills::class);
 
     }
 }

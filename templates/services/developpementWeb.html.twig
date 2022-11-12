@@ -212,7 +212,14 @@
           </p>
           <div class="slider">
             <div class="slide-track">
-              <div class="slide">
+              {% for pics in pic %}
+                <div class="slide">
+                <img class="images"
+                  src="{{ asset('picskills/' ~ pics.link) }}"
+                  alt="image de l'icone du langage php" />
+              </div> 
+              {% endfor %}
+              {# <div class="slide">
                 <img class="images"
                   src="{{ asset('/images_developpementWeb/PHP-1.jpg') }}"
                   alt="image de l'icone du langage php" />
@@ -236,7 +243,7 @@
                 <img class="images"
                   src="{{ asset('/images_developpementWeb/angular-1.jpg') }}"
                   alt="image de l'icone du langage Angular" />
-              </div>
+              </div> #}
             </div>
           </div>
         </div>

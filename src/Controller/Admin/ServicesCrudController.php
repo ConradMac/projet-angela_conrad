@@ -25,14 +25,8 @@ class ServicesCrudController extends AbstractCrudController
 
             SlugField::new('slug')->setTargetFieldName('name')->setlabel('Slug'),
             MoneyField::new('price')->setCurrency('EUR')->setlabel('Prix'),
-            AssociationField::new('categories')->setlabel('Catégories'),  
-            
-            
-            
-
-
-            
-            
+            // AssociationField::new('category')->setlabel('Catégorie'),
+            AssociationField::new('categories')->setlabel('Catégories'),   
         ];
     }
     

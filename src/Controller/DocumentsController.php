@@ -16,22 +16,19 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class DocumentsController extends AbstractController
 {
     #[Route('/documents', name: 'app_mon_compte')]
-    public function new(Request $request, SluggerInterface $slugger, EntityManagerInterface $entityManager)
-    {
-
+    public function new(
+        Request $request,
+        SluggerInterface $slugger,
+        EntityManagerInterface $entityManager
+    ) {
         $file = new Documents();
         $form = $this->createForm(DocumentsType::class, $file);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            $newFiles['seo'] =  $form->get('seo')->getData();
-            $newFiles['ui_ux'] =  $form->get('ui_ux')->getData();
-            $newFiles['image_service'] =  $form->get('image_service')->getData();
-
-
-
-
+            $newFiles['seo'] = $form->get('seo')->getData();
+            $newFiles['ui_ux'] = $form->get('ui_ux')->getData();
+            $newFiles['image_service'] = $form->get('image_service')->getData();
 
             // this condition is needed because the 'brochure' field is not required
             // so the PDF file must be processed only when a file is uploaded
@@ -42,7 +39,12 @@ class DocumentsController extends AbstractController
                         $originalFilename = $newFile->getClientOriginalName();
                         // this is needed to safely include the file name as part of the URL
                         $safeFilename = $slugger->slug($originalFilename);
-                        $newFilename = $safeFilename . '-' . uniqid() . '.' . $newFile->guessExtension();
+                        $newFilename =
+                            $safeFilename .
+                            '-' .
+                            uniqid() .
+                            '.' .
+                            $newFile->guessExtension();
                         $newFile->move(
                             $this->getParameter('documents_directory'),
                             $newFilename
@@ -65,13 +67,11 @@ class DocumentsController extends AbstractController
             $entityManager->persist($file);
             $entityManager->flush();
 
-
-
             // ... persist the $product variable or any other work
 
-            $entityManager->persist($file);
-            // $entityManager->persist($newDocuments);
-            $entityManager->flush();
+            // $entityManager->persist($file);
+            // // $entityManager->persist($newDocuments);
+            // $entityManager->flush();
 
             return $this->redirectToRoute('app_mon_compte');
         } // fermeture soumission formulaire
@@ -81,9 +81,4 @@ class DocumentsController extends AbstractController
             'titre_seo' => $titre_seo,
         ]);
     } //fermeture pubf new
-
-
-
-
-
-}// fermeture controller
+} // fermeture controller
