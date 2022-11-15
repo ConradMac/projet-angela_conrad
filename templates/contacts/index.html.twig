@@ -6,15 +6,13 @@
   {# {{ form(form) }}
   {% block body %} #}
   <section class="container col-8">
-
-    <h1 class="mb-5 titre-contact">
-    </h1>
-      {% for success in app.flashes('success') %} 
-        <div class="alert alert-success">
-          <a href="{{ path('app_contact') }}" class='close' data-dismiss='alert' aria-label='close'>X</a>
-          {{ success }}
-        </div>
-      {% endfor %}
+    <h1 class="mb-5 titre-contact"></h1>
+    {# ligne de code pour success ou fail #}
+    {% for success in app.flashes('success') %}
+      <div class="alert alert-success">
+        {{ success }}
+      </div>
+    {% endfor %}
 
     <div class="form">
       {{ form_start(form) }}

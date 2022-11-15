@@ -5,8 +5,6 @@
 {% endblock %}
 
 {% block body %}
-  {# <h1>Mon compte</h1> #}
-
   <div id="profil">
     <ul class="informations_client">
       <li><b>Email :</b><br />{{ app.user.email }}</li>
@@ -39,30 +37,34 @@
       {{ form_row(form.image_service) }}
       {# {{ form_row(form.users) }} #}
 
- 
-
       {# {{ form_row(Documents.services) }} #}
       {{ form_row(form.description) }}
       {{ form_end(form) }}
 
-      {% if app.user %}
-        <div class="mb-3">
-          Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Se
-            déconnecter</a>
-        </div>
+      {# {% if app.user %} #}
+      <div class="mb-3">
+        Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Se
+          déconnecter</a>
+      </div>
 
-        <div class="lien_connexion">
-          <p>
-            Vous souhaitez vous connecter avec un autre compte ? Cliquez <a href="{{
-              path(
-                'app_login'
-              )
-              }}">
-              ici
-            </a> pour vous connecter.
-          </p>
-        </div>
-      {% endif %}
+      <div class="lien_connexion">
+        <p>
+          Vous souhaitez vous connecter avec un autre compte ? Cliquez <a href="{{
+            path(
+              'app_login'
+            )
+            }}">
+            ici
+          </a> pour vous connecter.
+        </p>
+      </div>
+
+      <div class="lien_connexion">
+        <a href="path('app_account_password')">
+          Je souhaite modifier mon mot de passe.
+        </a>
+      </div>
+      {# {% endif %} #}
     </div>
   </div>
 {% endblock %}

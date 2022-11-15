@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Modifier mon mot de passe !
+{% endblock %}
+
+{% block body %}
+  {% for success in app.flashes('success') %}
+    <div class="alert alert-success">
+      {{ success }}
+    </div>
+  {% endfor %}
+  {% for danger in app.flashes('danger') %}
+    <div class="alert alert-danger">
+      {{ danger }}
+    </div>
+  {% endfor %}
+  {# créer Div pour faire le style Important. #}
+  {{ form_start(changePasswordForm) }}
+
+  {{ form_row(changePasswordForm.old_password) }}
+
+  {{ form_row(changePasswordForm.new_password) }}
+
+  {{ form_row(changePasswordForm.submit) }}
+
+  {{ form_end(changePasswordForm) }}
+{% endblock %}

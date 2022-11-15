@@ -15,7 +15,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class DocumentsController extends AbstractController
 {
-    #[Route('/documents', name: 'app_mon_compte')]
+    #[Route('/mon_profil', name: 'app_mon_compte')]
     public function new(
         Request $request,
         SluggerInterface $slugger,

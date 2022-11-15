@@ -48,10 +48,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 15)]
     private ?string $phone = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $birthday = null;
+    // #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    // private ?\DateTimeInterface $birthday = null;
 
-    #[ORM\Column (nullable: true)]
+    #[ORM\Column (type: 'datetime_immutable', options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeImmutable $modified_at = null;
 
     #[ORM\Column]
@@ -75,7 +75,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __construct()
     {
         $this->documents = new ArrayCollection();
-        $this->created_at = new \DateTimeImmutable();
+        // $this->created_at = new \DateTimeImmutable();
+        $this->modified_at = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
@@ -208,17 +209,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getBirthday(): ?\DateTimeInterface
-    {
-        return $this->birthday;
-    }
+    // public function getBirthday(): ?\DateTimeInterface
+    // {
+    //     return $this->birthday;
+    // }
 
-    public function setBirthday(\DateTimeInterface $birthday): self
-    {
-        $this->birthday = $birthday;
+    // public function setBirthday(\DateTimeInterface $birthday): self
+    // {
+    //     $this->birthday = $birthday;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getModifiedAt(): ?\DateTimeImmutable
     {

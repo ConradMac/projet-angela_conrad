@@ -289,14 +289,18 @@ span .h3,
 
 
         .cadre {
-            margin-right: 5%;
+            // margin-right: 5%;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            .cadre>h3 {
+                font-size: 1.25rem;
+            }
         }
 
         .images-team {
-            width: 50%;
+            // width: 50%;
             margin-bottom: 10%;
         }
     }
@@ -428,11 +432,10 @@ span .h3,
 
 }
 
-
+// parti click sur les boutons apparait le texte
 .wrapper .bloc {
     display: none;
     padding: 0.5rem;
-
 }
 
 .wrapper :target+div {

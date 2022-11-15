@@ -15,12 +15,14 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class DocumentsType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options): void
-    {
+    public function buildForm(
+        FormBuilderInterface $builder,
+        array $options
+    ): void {
         $builder
-            
+
             ->add('description')
-            ->add('ui_ux', FileType:: class,[
+            ->add('ui_ux', FileType::class, [
                 'multiple' => false,
                 'data_class' => null,
                 'label' => ' Si UX/ UI',
@@ -29,51 +31,55 @@ class DocumentsType extends AbstractType
                 'empty_data' => '',
                 'constraints' => [
                     new File([
-
-                        'maxSize' => '1024k',
+                        'maxSize' => '2048k',
                         'mimeTypes' => [
                             'application/pdf',
                             'application/x-pdf',
                             'application/doc',
-                            'application/fig',
+                            'application/docx',
+                            'application/figx',
+                            'application/odt',
+                            'application/ott',
+                            'application/jpg',
                         ],
-                        'mimeTypesMessage' => 'Please upload a valid PDF, document, Figma file',
-                    ])
+                        'mimeTypesMessage' =>
+                            'Please upload a valid PDF, document, Figma file',
+                    ]),
                 ],
             ])
-            ->add('seo', FileType:: class,  [
-            'multiple' => false,
-            'data_class' => null,
+            ->add('seo', FileType::class, [
+                'multiple' => false,
+                'data_class' => null,
                 'label' => '  Si SEO (texte à placer par page)',
-                
+
                 'mapped' => true,
                 'required' => false,
                 'empty_data' => '',
-               
-           
             ])
-            ->add('image_service', FileType:: class, [
-            'multiple' => false,
-            'data_class' => null,
+            ->add('image_service', FileType::class, [
+                'multiple' => false,
+                'data_class' => null,
                 'label' => 'Si images à fournir des produits',
                 'mapped' => true,
                 'required' => false,
                 'empty_data' => '',
                 'constraints' => [
                     new File([
-                        'maxSize' => '1024k',
+                        'maxSize' => '2048k',
                         'mimeTypes' => [
                             'application/pdf',
                             'application/x-pdf',
                             'application/doc',
                             'application/fig',
                         ],
-                        'mimeTypesMessage' => 'Please upload a valid PDF, document, Figma file',
-                    ])
+                        'mimeTypesMessage' =>
+                            'Please upload a valid PDF, document, Figma file',
+                    ]),
                 ],
             ])
+
             // ->add('users', IntegerType:: class, [
-            
+
             //     'label' => 'users',
             //     'mapped' => true,
             //     'required' => false,
@@ -101,10 +107,9 @@ class DocumentsType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer',
                 'attr' => [
-                    'class' => 'btn btn-primary'
-                ]
-            ])
-        ;
+                    'class' => 'btn btn-primary',
+                ],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

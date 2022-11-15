@@ -16,18 +16,24 @@ class DocumentsCrudController extends AbstractCrudController
         return Documents::class;
     }
 
-    
     public function configureFields(string $pageName): iterable
     {
         return [
             AssociationField::new('users')->setlabel('users'),
             DateField::new('sending_date')->setlabel('sending_date'),
             TextField::new('description')->setlabel('description'),
-            ImageField::new('seo')->setBasePath($this->getParameter('documents_directory'))->setlabel('seo'),
-            ImageField::new('ui_ux')->setBasePath($this->getParameter('documents_directory'))->setUploadDir('public/documents')->setlabel('ui_ux'),
-            ImageField::new('image_service')->setBasePath('documents')->setUploadDir('public/documents')->setlabel('image service'),
+            ImageField::new('seo')
+                ->setBasePath($this->getParameter('documents_directory'))
+                ->setlabel('seo'),
+            ImageField::new('ui_ux')
+                ->setBasePath($this->getParameter('documents_directory'))
+                ->setUploadDir('public/documents')
+                ->setlabel('ui_ux'),
+            ImageField::new('image_service')
+                ->setBasePath('documents')
+                ->setUploadDir('public/documents')
+                ->setlabel('image service'),
             // fielfield easy admin.
         ];
     }
-    
 }
